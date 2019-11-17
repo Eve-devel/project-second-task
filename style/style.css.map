@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,OAAQ;EACN,aAAa,EAAE,IAAI;EACnB,WAAW,EAAE,UAAU;EACvB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;;ACNnB,OAAQ;EACR,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,IAAI;EACZ,IAAI,EAAE,GAAG;EACT,GAAG,EAAE,GAAG;EAER,UAAU,EAAE,OAAO;EACnB,UAAU,EAAE,oCAAoC;;ACRhD,KAAM;EACJ,gBAAgB,EAAE,2BAA2B;EAC7C,KAAK,EAAE,QAAQ;EACf,MAAM,EAAE,IAAI;;ACHd,UASC;EARG,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,sSAI4D;EACjE,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;AAEtB,UASC;EARG,WAAW,EAAE,eAAe;EAC5B,GAAG,EAAE,sSAI4D;EACjE,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;AClBtB,WAAY;EACV,WAAW,EAAE,UAAU;;ACDzB,eAAgB;EACd,WAAW,EAAE,aAAa",
-"sources": ["../common.blocks/button/button.scss","../common.blocks/header/header.scss","../common.blocks/logo/logo.scss","../fonts/fonts.scss","../common.blocks/header/__nav/header__nav.scss","../common.blocks/material-icons/material-icons.scss"],
-"names": [],
-"file": "style.css"
-}

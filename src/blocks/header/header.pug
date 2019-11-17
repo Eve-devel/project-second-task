@@ -1,0 +1,12 @@
+header(class='header')
+  div(class='logo')
+  nav(class='header_nav')
+    each val in ['О нас', 'Услуги']
+     p= val
+    span(class='material-icons') expand_more
+    each val in ['Вакансии', 'Новости', 'Соглашения']
+     p= val
+    span.material-icons expand_more
+  div.button_wrapper-gradient-border
+    input(class="button button_colorless" type="submit" value="ВОЙТИ")
+  input(class="button button_color" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ")
