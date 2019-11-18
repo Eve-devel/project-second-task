@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="../style.scss")
+  body
+    div.logo.logo_grey-emblem
+
+    -
+     var colors = [
+       {colore: 'color_dark-shade100', texte: 'Dark Shade 100% \n #1F2041'},
+       {colore: 'color_dark-shade75', texte: 'Dark Shade 75% #1F2041'},
+       {colore: 'color_dark-shade50', texte: 'Dark Shade 50% #1F2041'},
+       {colore: 'color_dark-shade25', texte: 'Dark Shade 25% #1F2041'},
+       {colore: 'color_dark-shade5', texte: 'Dark Shade 5% #1F2041'},
+       {colore: 'color_purple', texte: 'Purple #BC9CFF'},
+       {colore: 'color_green', texte: 'Green #6FCF97'}
+     ]
+    each val in colors
+      div.color__block
+        div(class= val.colore).color__rectangle
+        pre
+          div.color__text= val.texte

@@ -1,12 +1,14 @@
-header(class='header')
-  div(class='logo')
-  nav(class='header_nav')
-    each val in ['О нас', 'Услуги']
-     p= val
-    span(class='material-icons') expand_more
-    each val in ['Вакансии', 'Новости', 'Соглашения']
-     p= val
-    span.material-icons expand_more
-  div.button_wrapper-gradient-border
+header.header
+  div.logo.logo_color-with-text.header__logo
+  nav.nav.header__nav
+    each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+     if val == 'Услуги' || val == 'Соглашения'
+       p= val
+            span.material-icons expand_more
+     else
+       p= val
+
+
+  div.button_wrapper-gradient-border.header__button-entrance
     input(class="button button_colorless" type="submit" value="ВОЙТИ")
-  input(class="button button_color" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ")
+  input(class="button button_color header__button-registration" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ")

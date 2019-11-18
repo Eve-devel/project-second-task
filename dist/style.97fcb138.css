@@ -16,14 +16,22 @@
   top: 0px;
   display: flex;
   align-items: center;
-  background: #FFFFFF;
+  background: #FFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .logo {
+  height: 40px;
+}
+
+.logo_color-with-text {
   background-image: url(/logo.562c3a58.svg);
   width: 105.69px;
-  height: 40px;
+}
+
+.logo_grey-emblem {
+  background-image: url(/logo__emb.9b69b3de.svg);
+  width: 40px;
 }
 
 @font-face {
@@ -38,16 +46,19 @@
   font-weight: 400;
   font-style: normal;
 }
-.header_nav {
-  font-family: Montserrat;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+.header__nav {
+  position: absolute;
+  left: 531px;
+  top: 26px;
+  width: 446px;
+  height: 21px;
+  justify-content: space-between;
 }
 
 .material-icons {
   font-family: MaterialIcons;
   font-size: 24px;
+  vertical-align: bottom;
 }
 
 .button_color {
@@ -62,7 +73,6 @@
 
 .button_colorless {
   background-clip: padding-box;
-  border: 2px solid transparent;
   background-color: #FFF;
   color: #BC9CFF;
   padding-left: 18px;
@@ -74,7 +84,31 @@
 .button_wrapper-gradient-border {
   background-image: linear-gradient(to bottom, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  width: max-content;
+}
+
+.nav {
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  vertical-align: middle;
+}
+
+.header__logo {
+  position: absolute;
+  left: 140px;
+  top: 15px;
+}
+
+.header__button-registration {
+  position: absolute;
+  left: 1104px;
+}
+
+.header__button-entrance {
+  position: absolute;
+  left: 997px;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

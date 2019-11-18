@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.pug",
-    "build": "parcel build src/index.pug -d docs --public-url ./"
+    "start": "parcel src/pages/colors-and-type.pug",
+    "build": "parcel build src/pages/colors-and-type.pug -d docs --public-url ./"
   },
   "license": "MIT",
   "devDependencies": {

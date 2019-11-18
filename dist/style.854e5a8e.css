@@ -1,0 +1,164 @@
+.button {
+  border-radius: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border: 2px solid transparent;
+}
+
+.header {
+  position: absolute;
+  width: 1440px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.logo_color-with-text {
+  background-image: url(/logo.6c341f76.svg);
+  width: 105.69px;
+  height: 40px;
+}
+
+.logo_grey-emblem {
+  background-image: url(/logo__emb.9720e0e5.svg);
+  width: 48px;
+  height: 48px;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/montserrat-400-normal.af0b854e.woff2") format("woff2"), url("/montserrat-400-normal.06dc7cfb.woff") format("woff"), url("/montserrat-400-normal.6ddc9175.eot") format("eot"), url("/montserrat-400-normal.0a0a0699.svg") format("svg"), url("/montserrat-400-normal.1aca8836.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MaterialIcons";
+  src: url("/MaterialIcons-Regular.0803c818.woff2") format("woff2"), url("/MaterialIcons-Regular.30b8ceaf.woff") format("woff"), url("/MaterialIcons-Regular.8c1edd37.eot") format("eot"), url("/MaterialIcons-Regular.3a910ebb.svg") format("svg"), url("/MaterialIcons-Regular.d14747fd.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.header__nav {
+  position: absolute;
+  left: 531px;
+  top: 26px;
+  width: 446px;
+  height: 21px;
+  justify-content: space-between;
+}
+
+.material-icons {
+  font-family: MaterialIcons;
+  font-size: 24px;
+  vertical-align: bottom;
+}
+
+.button_color {
+  color: #FFF;
+  background-image: linear-gradient(to bottom, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: padding-box;
+  padding-left: 19px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+
+.button_colorless {
+  background-clip: padding-box;
+  background-color: #FFF;
+  color: #BC9CFF;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
+.button_wrapper-gradient-border {
+  background-image: linear-gradient(to bottom, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+
+.nav {
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  vertical-align: middle;
+}
+
+.header__logo {
+  position: absolute;
+  left: 140px;
+  top: 15px;
+}
+
+.header__button-registration {
+  position: absolute;
+  left: 1104px;
+}
+
+.header__button-entrance {
+  position: absolute;
+  left: 997px;
+}
+
+.color__block {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  left: 150px;
+}
+
+.color__rectangle {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.color__text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+}
+
+.color_dark-shade5 {
+  background-color: rgba(31, 32, 65, 0.05);
+}
+
+.color_dark-shade25 {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+
+.color_dark-shade50 {
+  background-color: rgba(31, 32, 65, 0.5);
+}
+
+.color_dark-shade75 {
+  background-color: rgba(31, 32, 65, 0.75);
+}
+
+.color_dark-shade100 {
+  background-color: #1F2041;
+}
+
+.color_green {
+  background-color: #BC9CFF;
+}
+
+.color_purple {
+  background-color: #6FCF97;
+}
+
+/*# sourceMappingURL=/style.854e5a8e.css.map */
