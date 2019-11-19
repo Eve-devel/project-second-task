@@ -1,0 +1,32 @@
+div.text-types__wrapper
+  -
+   var types = [
+    {
+      type: 'H1',
+      type_font: 'text-types_montserrat-normal text-types_24px text-types_dark-shade25',
+      text: 'This one is the sub-section or widget title',
+      text_font: 'text-types_quicksand-bold text-types_24px text-types_dark-shade100'
+    },
+    {
+      type: 'H2',
+      type_font: 'text-types_montserrat-normal text-types_19px text-types_dark-shade25',
+      text: 'Next one is the item title inside widgets',
+      text_font: 'text-types_quicksand-bold text-types_19px text-types_dark-shade100'
+    },
+    {
+      type: 'H3',
+      type_font: 'text-types_montserrat-normal text-types_12px text-types_dark-shade25',
+      text: 'This is a label or CTA text',
+      text_font: 'text-types_montserrat-bold text-types_12px text-types_dark-shade100'
+    },
+    {
+      type: 'Body',
+      type_font: 'text-types_montserrat-normal text-types_14px text-types_dark-shade25',
+      text: 'This is the body text which is used for most \n of the design, like paragraphs, lists, etc.',
+      text_font: 'text-types_montserrat-normal text-types_14px text-types_dark-shade75'
+    }
+   ]
+  each val in types
+    div.text-types
+      div(class= val.type_font).text-types__name= val.type
+      div(class= val.text_font)= val.text

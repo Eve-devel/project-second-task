@@ -13,13 +13,35 @@
 @import "blocks/header/__logo/header__logo";
 @import "blocks/header/__button-registration/header__button-registration";
 @import "blocks/header/__button-entrance/header__button-entrance";
-@import "blocks/color/color-block";
-@import "blocks/color/__rectangle/color__rectangle";
-@import "blocks/color/__text/color__text";
-@import "blocks/color/_dark-shade5/color_dark-shade5";
-@import "blocks/color/_dark-shade25/color_dark-shade25";
-@import "blocks/color/_dark-shade50/color_dark-shade50";
-@import "blocks/color/_dark-shade75/color_dark-shade75";
-@import "blocks/color/_dark-shade100/color_dark-shade100";
-@import "blocks/color/_green/color_green";
-@import "blocks/color/_purple/color_purple";
+
+@import "blocks/colors/colors";
+@import "blocks/colors/__rectangle/colors__rectangle";
+@import "blocks/colors/__text/colors__text";
+@import "blocks/colors/__text/_bold/colors__text_bold";
+@import "blocks/colors/__text/_regular/colors__text_regular";
+@import "blocks/colors/__wrapper/colors__wrapper";
+@import "blocks/colors/_dark-shade5/colors_dark-shade5";
+@import "blocks/colors/_dark-shade25/colors_dark-shade25";
+@import "blocks/colors/_dark-shade50/colors_dark-shade50";
+@import "blocks/colors/_dark-shade75/colors_dark-shade75";
+@import "blocks/colors/_dark-shade100/colors_dark-shade100";
+@import "blocks/colors/_green/colors_green";
+@import "blocks/colors/_purple/colors_purple";
+
+@import "blocks/text-types/text-types";
+@import "blocks/text-types/__name/text-types__name";
+@import "blocks/text-types/__wrapper/text-types__wrapper";
+@import "blocks/text-types/_12px/text-types_12px";
+@import "blocks/text-types/_14px/text-types_14px";
+@import "blocks/text-types/_19px/text-types_19px";
+@import "blocks/text-types/_24px/text-types_24px";
+@import "blocks/text-types/_montserrat-bold/text-types_montserrat-bold";
+@import "blocks/text-types/_montserrat-normal/text-types_montserrat-normal";
+@import "blocks/text-types/_quicksand-bold/text-types_quicksand-bold";
+@import "blocks/text-types/_quicksand-normal/text-types_quicksand-normal";
+@import "blocks/text-types/_dark-shade25/text-types_dark-shade25";
+@import "blocks/text-types/_dark-shade75/text-types_dark-shade75";
+@import "blocks/text-types/_dark-shade100/text-types_dark-shade100";
+
+@import "blocks/wrapper/_horizontal/wrapper_horizontal";
+@import "blocks/wrapper/_vertical/wrapper_vertical";
