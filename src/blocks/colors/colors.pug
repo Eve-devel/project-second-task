@@ -1,17 +1,17 @@
 div.colors__wrapper
  -
   var colors = [
-    {color: 'colors_dark-shade100', textpart1: 'Dark Shade 100%', textpart2: '#1F2041'},
-    {color: 'colors_dark-shade75', textpart1: 'Dark Shade 75%', textpart2: '#1F2041'},
-    {color: 'colors_dark-shade50', textpart1: 'Dark Shade 50%', textpart2: '#1F2041'},
-    {color: 'colors_dark-shade25', textpart1: 'Dark Shade 25%', textpart2: '#1F2041'},
-    {color: 'colors_dark-shade5', textpart1: 'Dark Shade 5%', textpart2: '#1F2041'},
-    {color: 'colors_purple', textpart1: 'Purple', textpart2: '#BC9CFF'},
-    {color: 'colors_green', textpart1: 'Green', textpart2: '#6FCF97'}
+    {color: 'colors__rectangle_fill_shade100', textpart1: 'Dark Shade 100%', textpart2: '#1F2041'},
+    {color: 'colors__rectangle_fill_shade75', textpart1: 'Dark Shade 75%', textpart2: '#1F2041'},
+    {color: 'colors__rectangle_fill_shade50', textpart1: 'Dark Shade 50%', textpart2: '#1F2041'},
+    {color: 'colors__rectangle_fill_shade25', textpart1: 'Dark Shade 25%', textpart2: '#1F2041'},
+    {color: 'colors__rectangle_fill_shade5', textpart1: 'Dark Shade 5%', textpart2: '#1F2041'},
+    {color: 'colors__rectangle_fill_purple', textpart1: 'Purple', textpart2: '#BC9CFF'},
+    {color: 'colors__rectangle_fill_green', textpart1: 'Green', textpart2: '#6FCF97'}
   ]
  each val in colors
    div.colors
      div(class= val.color).colors__rectangle
      div.text-types_dark-shade100
-       div.colors__text.colors__text_bold= val.textpart1
-       div.colors__text.colors__text_regular= val.textpart2
+       div.colors__text.colors__text_type_bold= val.textpart1
+       div.colors__text.colors__text_type_regular= val.textpart2

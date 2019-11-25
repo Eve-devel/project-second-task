@@ -4,11 +4,29 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/pages/colors-and-type.pug",
-    "build": "parcel build src/pages/colors-and-type.pug -d docs --public-url ./"
+    "build": "parcel build src/index.pug -d docs --public-url ./"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-react": "^7.7.0",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "autoprefixer": "^9.7.2",
+    "parcel-plugin-purgecss": "^2.1.3",
+    "postcss-modules": "^1.4.1",
+    "posthtml-include": "^1.3.2",
     "pug": "^2.0.4",
-    "sass": "^1.23.6"
+    "sass": "^1.23.7"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-import": "^12.0.1",
+    "postcss-uncss": "^0.17.0",
+    "posthtml-img-autosize": "^0.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "uncss": "^0.17.2"
   }
 }

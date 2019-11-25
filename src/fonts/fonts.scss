@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/montserrat-400-normal.woff2') format('woff2'),
-         url('fonts/montserrat-400-normal.woff') format('woff'),
+    src: 
          url('fonts/montserrat-400-normal.eot') format('eot'),
          url('fonts/montserrat-400-normal.svg') format('svg'),
          url('fonts/montserrat-400-normal.ttf') format('truetype');
@@ -30,10 +29,10 @@
 }
 @font-face {
     font-family: 'Quicksand';
-    src: url('fonts/quicksand-700-normal.woff') format('woff'),
-         url('fonts/quicksand-700-normal.eot') format('eot'),
-         url('fonts/quicksand-700-normal.svg') format('svg'),
+    src: url('fonts/quicksand-700-normal.eot') format('eot'),
          url('fonts/quicksand-700-normal.ttf') format('truetype'),
+         url('fonts/quicksand-700-normal.woff') format('woff'),
+         url('fonts/quicksand-700-normal.svg') format('svg'),
          url('fonts/quicksand-700-normal.otf') format('otf');
     font-weight: 700;
     font-style: normal;
