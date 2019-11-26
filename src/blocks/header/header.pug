@@ -1,5 +1,5 @@
 header.header
-  div.logo.logo_color-with-text.header__logo
+  +logo('color')
   nav.nav.header__nav
     each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
      if val == 'Услуги' || val == 'Соглашения'

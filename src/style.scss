@@ -1,35 +1,7 @@
-.bro {
-  color: red;
-}
 @import "./blocks/button/button";
-@import "./blocks/header/header";
-@import "./blocks/logo/logo";
-@import "./blocks/logo/_color-with-text/logo_color-with-text";
-@import "./blocks/logo/_grey-emblem/logo_grey-emblem";
-@import "./fonts/fonts";
-@import "./blocks/header/__nav/header__nav";
-@import "./blocks/material-icons/material-icons";
 @import "./blocks/button/_color";
 @import "./blocks/button/_colorless";
 @import "./blocks/button/_wrapper-gradient-border";
-@import "./blocks/nav/nav";
-@import "./blocks/header/__logo/header__logo";
-@import "./blocks/header/__button-registration/header__button-registration";
-@import "./blocks/header/__button-entrance/header__button-entrance";
-
-@import "./blocks/colors/colors";
-@import "./blocks/colors/__rectangle/colors__rectangle";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_green";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_purple";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade5";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade25";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade50";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade75";
-@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade100";
-@import "./blocks/colors/__text/colors__text";
-@import "./blocks/colors/__text/_type/colors__text_type_bold";
-@import "./blocks/colors/__text/_type/colors__text_type_regular";
-@import "./blocks/colors/__wrapper/colors__wrapper";
 
 @import "./blocks/text-types/text-types";
 @import "./blocks/text-types/__name/text-types__name";
@@ -41,9 +13,37 @@
 @import "./blocks/text-types/_type/text-types_type_Body";
 @import "./blocks/text-types/_type/text-types_type_Body_width";
 @import "./blocks/text-types/_type/text-types_type_H1";
-@import "./blocks/text-types/_type/text-types_type_H2";
-@import "./blocks/text-types/_type/text-types_type_H3";
+@import "./blocks/text-types/_type/text-types_type_H2_bold";
+@import "./blocks/text-types/_type/text-types_type_H3_bold";
+@import "./blocks/text-types/_type/text-types_type_H2_normal";
+@import "./blocks/text-types/_type/text-types_type_H3_normal";
 
+@import "./blocks/header/header";
+@import "./blocks/header/__nav/header__nav";
+@import "./blocks/header/__logo/header__logo";
+@import "./blocks/header/__button-registration/header__button-registration";
+@import "./blocks/header/__button-entrance/header__button-entrance";
+
+@import "./blocks/logo/logo_color-with-text";
+@import "./blocks/logo/logo_grey-emblem";
+
+@import "./fonts/fonts";
+
+@import "./blocks/material-icons/material-icons";
+
+@import "./blocks/nav/nav";
+
+@import "./blocks/colors/colors";
+@import "./blocks/colors/__rectangle/colors__rectangle";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_green";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_purple";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade5";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade25";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade50";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade75";
+@import "./blocks/colors/__rectangle/_fill/colors__rectangle_fill_shade100";
+@import "./blocks/colors/__text/colors__text";
+@import "./blocks/colors/__wrapper/colors__wrapper";
 
 @import "./blocks/wrapper/_type/wrapper_type_horizontal";
 @import "./blocks/wrapper/_type/wrapper_type_vertical";
