@@ -1,11 +1,13 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-  body
-    div.logo.logo_grey-emblem
-    div.wrapper_type_horizontal
-      include ../blocks/colors/colors.pug
-      include ../blocks/text-types/text-types.pug
+extends ../layouts/ui-kit
 
-      script(src='../index.js')
+block title
+  | Form Elements
+
+block content
+  include ../blocks/text-field/text-field.pug
+  include ../blocks/dropdown/dropdown.pug
+
+  .elements__main
+    +text-field('Text Field', 'Email', 'Default')
+    +text-field('Text Field', 'This is pretty awesome', 'Hover/Focus')
+    +dropdown('Dropdown', 'Сколько гостей')
