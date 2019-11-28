@@ -2,9 +2,13 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    <link href="../path/plagins/item-quantity-dropdown.min.css" rel="stylesheet">
+    <link href="../style.scss" rel="stylesheet">
+
+    block styles
+
     title
       block title
+
   body
     include ../blocks/logo/logo.pug
     include ../blocks/text-types/text-types.pug
@@ -12,5 +16,4 @@ html(lang="ru")
 
     block content
 
-    script(src='../index.js')
-    script(src='../plagins/item-quantity-dropdown.min.js') 
+    block scripts
