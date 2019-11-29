@@ -1,12 +1,14 @@
 div.iqdropdown
-  p.iqdropdown-selection
+  p.iqdropdown-selection= 'Сколько гостей'
   div.iqdropdown-menu
-    div(class='iqdropdown-menu-option' data-id='item1' data-defaultcount="1" data-mincount="1")
+    div(class='iqdropdown-menu-option' data-id='item1' data-defaultcount="0" data-mincount="0")
       div
-        p.iqdropdown-item= 'Взрослый'
-        p.iqdropdown-description= '18+'
+        p.iqdropdown-item= 'Взрослые'
     div(class='iqdropdown-menu-option' data-id='item2' data-defaultcount="0" data-mincount="0")
       div
-        p.iqdropdown-item= 'ребёнок'
-        p.iqdropdown-description= '12+'
-    button.iqdropdown-menu-close= 'fjjfd'
+        p.iqdropdown-item= 'Дети'
+    div(class='iqdropdown-menu-option' data-id='item3' data-defaultcount="0" data-mincount="0")
+      div
+        p.iqdropdown-item= 'Младенцы'
+    button.iqdropdown-menu-clear= 'Очистить'
+    button(class='iqdropdown-menu-close' type= 'reset')= 'Применить'

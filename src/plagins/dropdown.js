@@ -1,10 +1,12 @@
 $(document).ready(function() {
   $('.iqdropdown').iqDropdown({
 
-  maxItems: 5,
-  minItems: 1,
-  selectionText: 'item',
-  textPlural: 'items',
+  maxItems: Infinity,
+  minItems: 0,
+  selectionText: 'гость',
+  selectionText1: 'гостя',
+  selectionText2: 'гостей',
+  textPlural: 'Сколько гостей',
   controls: {
     position: 'right',
     displayCls: 'iqdropdown-item-display',
@@ -15,14 +17,14 @@ $(document).ready(function() {
   console.log(id, count, totalItems);
   },
   beforeDecrement: function(id, itemCount) {
-    if (id === "item1") {
-      return itemCount.adult > itemCount.infant;
+    if ((id == "item1") && (itemCount.item2 > 0 || itemCount.item3 > 0) && (itemCount.item1 == 1)) {
+      return false;
     }
     return true;
   },
   beforeIncrement: function(id, itemCount) {
-    if (id === "item2") {
-      return itemCount.adult > itemCount.infant;
+    if ((id === "item2" || id === "item3") && itemCount.item1 == 0) {
+      return false;
     }
     return true;
   }
