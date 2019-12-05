@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../style.scss":[function(require,module,exports) {
+},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./images\\svg\\logo.svg":[["logo.6c341f76.svg","images/svg/logo.svg"],"images/svg/logo.svg"],"./images\\svg\\logo__emb.svg":[["logo__emb.9720e0e5.svg","images/svg/logo__emb.svg"],"images/svg/logo__emb.svg"],"./fonts\\montserrat-400-normal.woff2":[["montserrat-400-normal.af0b854e.woff2","fonts/montserrat-400-normal.woff2"],"fonts/montserrat-400-normal.woff2"],"./fonts\\montserrat-400-normal.woff":[["montserrat-400-normal.06dc7cfb.woff","fonts/montserrat-400-normal.woff"],"fonts/montserrat-400-normal.woff"],"./fonts\\montserrat-400-normal.eot":[["montserrat-400-normal.6ddc9175.eot","fonts/montserrat-400-normal.eot"],"fonts/montserrat-400-normal.eot"],"./fonts\\montserrat-400-normal.svg":[["montserrat-400-normal.0a0a0699.svg","fonts/montserrat-400-normal.svg"],"fonts/montserrat-400-normal.svg"],"./fonts\\montserrat-400-normal.ttf":[["montserrat-400-normal.1aca8836.ttf","fonts/montserrat-400-normal.ttf"],"fonts/montserrat-400-normal.ttf"],"./fonts\\MaterialIcons-Regular.woff2":[["MaterialIcons-Regular.0803c818.woff2","fonts/MaterialIcons-Regular.woff2"],"fonts/MaterialIcons-Regular.woff2"],"./fonts\\MaterialIcons-Regular.woff":[["MaterialIcons-Regular.30b8ceaf.woff","fonts/MaterialIcons-Regular.woff"],"fonts/MaterialIcons-Regular.woff"],"./fonts\\MaterialIcons-Regular.eot":[["MaterialIcons-Regular.8c1edd37.eot","fonts/MaterialIcons-Regular.eot"],"fonts/MaterialIcons-Regular.eot"],"./fonts\\MaterialIcons-Regular.svg":[["MaterialIcons-Regular.3a910ebb.svg","fonts/MaterialIcons-Regular.svg"],"fonts/MaterialIcons-Regular.svg"],"./fonts\\MaterialIcons-Regular.ttf":[["MaterialIcons-Regular.d14747fd.ttf","fonts/MaterialIcons-Regular.ttf"],"fonts/MaterialIcons-Regular.ttf"],"./fonts\\quicksand-400-normal.woff":[["quicksand-400-normal.1be97f1b.woff","../fonts/quicksand-400-normal.woff"],"../fonts/quicksand-400-normal.woff"],"./fonts\\quicksand-400-normal.eot":[["quicksand-400-normal.a41b890e.eot","../fonts/quicksand-400-normal.eot"],"../fonts/quicksand-400-normal.eot"],"./fonts\\quicksand-400-normal.svg":[["quicksand-400-normal.416c69fb.svg","../fonts/quicksand-400-normal.svg"],"../fonts/quicksand-400-normal.svg"],"./fonts\\quicksand-400-normal.ttf":[["quicksand-400-normal.824c1893.ttf","../fonts/quicksand-400-normal.ttf"],"../fonts/quicksand-400-normal.ttf"],"./fonts\\quicksand-400-normal.otf":[["quicksand-400-normal.509311dd.otf","../fonts/quicksand-400-normal.otf"],"../fonts/quicksand-400-normal.otf"],"./fonts\\quicksand-700-normal.woff":[["quicksand-700-normal.8b86ef9c.woff","../fonts/quicksand-700-normal.woff"],"../fonts/quicksand-700-normal.woff"],"./fonts\\quicksand-700-normal.eot":[["quicksand-700-normal.70aa4fac.eot","../fonts/quicksand-700-normal.eot"],"../fonts/quicksand-700-normal.eot"],"./fonts\\quicksand-700-normal.svg":[["quicksand-700-normal.134e327d.svg","../fonts/quicksand-700-normal.svg"],"../fonts/quicksand-700-normal.svg"],"./fonts\\quicksand-700-normal.ttf":[["quicksand-700-normal.f8a4840c.ttf","../fonts/quicksand-700-normal.ttf"],"../fonts/quicksand-700-normal.ttf"],"./fonts\\quicksand-700-normal.otf":[["quicksand-700-normal.8d696842.otf","../fonts/quicksand-700-normal.otf"],"../fonts/quicksand-700-normal.otf"],"./fonts\\montserrat-700-normal.woff2":[["montserrat-700-normal.4722591c.woff2","../fonts/montserrat-700-normal.woff2"],"../fonts/montserrat-700-normal.woff2"],"./fonts\\montserrat-700-normal.woff":[["montserrat-700-normal.9671d6f3.woff","../fonts/montserrat-700-normal.woff"],"../fonts/montserrat-700-normal.woff"],"./fonts\\montserrat-700-normal.eot":[["montserrat-700-normal.df6aec16.eot","../fonts/montserrat-700-normal.eot"],"../fonts/montserrat-700-normal.eot"],"./fonts\\montserrat-700-normal.svg":[["montserrat-700-normal.4ae63aa4.svg","../fonts/montserrat-700-normal.svg"],"../fonts/montserrat-700-normal.svg"],"./fonts\\montserrat-700-normal.ttf":[["montserrat-700-normal.d5c18a30.ttf","../fonts/montserrat-700-normal.ttf"],"../fonts/montserrat-700-normal.ttf"],"./fonts\\opensans-700-normal.woff2":[["opensans-700-normal.b89cefd8.woff2","../fonts/opensans-700-normal.woff2"],"../fonts/opensans-700-normal.woff2"],"./fonts\\opensans-700-normal.woff":[["opensans-700-normal.e63ec35c.woff","../fonts/opensans-700-normal.woff"],"../fonts/opensans-700-normal.woff"],"./fonts\\opensans-700-normal.eot":[["opensans-700-normal.983479d9.eot","../fonts/opensans-700-normal.eot"],"../fonts/opensans-700-normal.eot"],"./fonts\\opensans-700-normal.svg":[["opensans-700-normal.cd45a579.svg","../fonts/opensans-700-normal.svg"],"../fonts/opensans-700-normal.svg"],"./fonts\\opensans-700-normal.ttf":[["opensans-700-normal.4d3b2cd2.ttf","../fonts/opensans-700-normal.ttf"],"../fonts/opensans-700-normal.ttf"],"_css_loader":"../../../npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./images\\svg\\logo.svg":[["logo.6c341f76.svg","../images/svg/logo.svg"],"../images/svg/logo.svg"],"./images\\svg\\logo__emb.svg":[["logo__emb.9720e0e5.svg","../images/svg/logo__emb.svg"],"../images/svg/logo__emb.svg"],"./fonts\\montserrat-400-normal.eot":[["montserrat-400-normal.6ddc9175.eot","../fonts/montserrat-400-normal.eot"],"../fonts/montserrat-400-normal.eot"],"./fonts\\montserrat-400-normal.svg":[["montserrat-400-normal.0a0a0699.svg","../fonts/montserrat-400-normal.svg"],"../fonts/montserrat-400-normal.svg"],"./fonts\\montserrat-400-normal.ttf":[["montserrat-400-normal.1aca8836.ttf","../fonts/montserrat-400-normal.ttf"],"../fonts/montserrat-400-normal.ttf"],"./fonts\\MaterialIcons-Regular.woff2":[["MaterialIcons-Regular.0803c818.woff2","../fonts/MaterialIcons-Regular.woff2"],"../fonts/MaterialIcons-Regular.woff2"],"./fonts\\MaterialIcons-Regular.woff":[["MaterialIcons-Regular.30b8ceaf.woff","../fonts/MaterialIcons-Regular.woff"],"../fonts/MaterialIcons-Regular.woff"],"./fonts\\MaterialIcons-Regular.eot":[["MaterialIcons-Regular.8c1edd37.eot","../fonts/MaterialIcons-Regular.eot"],"../fonts/MaterialIcons-Regular.eot"],"./fonts\\MaterialIcons-Regular.svg":[["MaterialIcons-Regular.3a910ebb.svg","../fonts/MaterialIcons-Regular.svg"],"../fonts/MaterialIcons-Regular.svg"],"./fonts\\MaterialIcons-Regular.ttf":[["MaterialIcons-Regular.d14747fd.ttf","../fonts/MaterialIcons-Regular.ttf"],"../fonts/MaterialIcons-Regular.ttf"],"./fonts\\quicksand-400-normal.woff":[["quicksand-400-normal.1be97f1b.woff","../fonts/quicksand-400-normal.woff"],"../fonts/quicksand-400-normal.woff"],"./fonts\\quicksand-400-normal.eot":[["quicksand-400-normal.a41b890e.eot","../fonts/quicksand-400-normal.eot"],"../fonts/quicksand-400-normal.eot"],"./fonts\\quicksand-400-normal.svg":[["quicksand-400-normal.416c69fb.svg","../fonts/quicksand-400-normal.svg"],"../fonts/quicksand-400-normal.svg"],"./fonts\\quicksand-400-normal.ttf":[["quicksand-400-normal.824c1893.ttf","../fonts/quicksand-400-normal.ttf"],"../fonts/quicksand-400-normal.ttf"],"./fonts\\quicksand-400-normal.otf":[["quicksand-400-normal.509311dd.otf","../fonts/quicksand-400-normal.otf"],"../fonts/quicksand-400-normal.otf"],"./fonts\\quicksand-700-normal.eot":[["quicksand-700-normal.70aa4fac.eot","../fonts/quicksand-700-normal.eot"],"../fonts/quicksand-700-normal.eot"],"./fonts\\quicksand-700-normal.ttf":[["quicksand-700-normal.f8a4840c.ttf","../fonts/quicksand-700-normal.ttf"],"../fonts/quicksand-700-normal.ttf"],"./fonts\\quicksand-700-normal.woff":[["quicksand-700-normal.8b86ef9c.woff","../fonts/quicksand-700-normal.woff"],"../fonts/quicksand-700-normal.woff"],"./fonts\\quicksand-700-normal.svg":[["quicksand-700-normal.134e327d.svg","../fonts/quicksand-700-normal.svg"],"../fonts/quicksand-700-normal.svg"],"./fonts\\quicksand-700-normal.otf":[["quicksand-700-normal.8d696842.otf","../fonts/quicksand-700-normal.otf"],"../fonts/quicksand-700-normal.otf"],"./fonts\\montserrat-700-normal.woff2":[["montserrat-700-normal.4722591c.woff2","../fonts/montserrat-700-normal.woff2"],"../fonts/montserrat-700-normal.woff2"],"./fonts\\montserrat-700-normal.woff":[["montserrat-700-normal.9671d6f3.woff","../fonts/montserrat-700-normal.woff"],"../fonts/montserrat-700-normal.woff"],"./fonts\\montserrat-700-normal.eot":[["montserrat-700-normal.df6aec16.eot","../fonts/montserrat-700-normal.eot"],"../fonts/montserrat-700-normal.eot"],"./fonts\\montserrat-700-normal.svg":[["montserrat-700-normal.4ae63aa4.svg","../fonts/montserrat-700-normal.svg"],"../fonts/montserrat-700-normal.svg"],"./fonts\\montserrat-700-normal.ttf":[["montserrat-700-normal.d5c18a30.ttf","../fonts/montserrat-700-normal.ttf"],"../fonts/montserrat-700-normal.ttf"],"./fonts\\opensans-700-normal.woff2":[["opensans-700-normal.b89cefd8.woff2","../fonts/opensans-700-normal.woff2"],"../fonts/opensans-700-normal.woff2"],"./fonts\\opensans-700-normal.woff":[["opensans-700-normal.e63ec35c.woff","../fonts/opensans-700-normal.woff"],"../fonts/opensans-700-normal.woff"],"./fonts\\opensans-700-normal.eot":[["opensans-700-normal.983479d9.eot","../fonts/opensans-700-normal.eot"],"../fonts/opensans-700-normal.eot"],"./fonts\\opensans-700-normal.svg":[["opensans-700-normal.cd45a579.svg","../fonts/opensans-700-normal.svg"],"../fonts/opensans-700-normal.svg"],"./fonts\\opensans-700-normal.ttf":[["opensans-700-normal.4d3b2cd2.ttf","../fonts/opensans-700-normal.ttf"],"../fonts/opensans-700-normal.ttf"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63310" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53344" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -248,8 +248,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 
@@ -392,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.854e5a8e.js.map

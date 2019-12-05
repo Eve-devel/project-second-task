@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/pages/colors-and-type.pug",
+    "start": "parcel src/pages/form-elements.pug",
     "build": "parcel build src/index.pug -d docs --public-url ./"
   },
   "license": "MIT",
@@ -21,6 +21,7 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "item-quantity-dropdown": "^2.0.2",
     "parcel-bundler": "^1.12.4",
     "postcss-import": "^12.0.1",
     "postcss-uncss": "^0.17.0",
