@@ -8,15 +8,15 @@ block styles
 
 block content
   include ../blocks/text-field/text-field.pug
-
+  include ../blocks/dropdown/dropdown.pug
 
   .elements__main
     +text-field('Text Field', 'Email', 'Default')
     +text-field('Text Field', 'This is pretty awesome', 'Hover/Focus')
-    include ../blocks/dropdown/dropdown.pug
+    +dropdown('Dropdown', 'guests', ['Взрослые', 'Дети', 'Младенцы'], true, 'Default')
+    +dropdown('Dropdown', 'rooms', ['Спальни', 'Кровати', 'Ванные комнаты'], false)
 
-    block scripts
-    script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
-    script(src='../plagins/item-quantity-dropdown.min.js')
-    script(src='../plagins/dropdown.js')
-    
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='../plagins/item-quantity-dropdown.min.js')
+  script(src='../plagins/dropdown.js')

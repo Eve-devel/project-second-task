@@ -2,5 +2,5 @@ mixin text-field(name, content, state)
   div.text-field
     div.text-field__name
       +text('H3-bold', name)
-      +text('H3-normal', state, 'text-field__state')
+      +text('H3-normal', state, 'text-field__name_state')
     input(type='text' value=content class='text-field__field text-field__content')
