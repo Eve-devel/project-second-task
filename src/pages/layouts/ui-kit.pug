@@ -1,0 +1,20 @@
+include ../../components/logo/logo.pug
+include ../../components/text-types/text-types.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    <link href="../../style/style.scss" rel="stylesheet">
+
+    block styles
+
+    title
+      block title
+
+  body
+    +logo('grey')
+
+    block content
+
+    block scripts

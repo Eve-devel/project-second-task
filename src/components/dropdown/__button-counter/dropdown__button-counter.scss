@@ -1,0 +1,13 @@
+.dropdown__button-counter {
+  border:1px solid $dark-shade-25;
+  display:flex;
+  justify-content: center;
+  height:30px;
+  width:30px;
+  transition:all 0.2s ease-in-out;
+  border-radius:22px;
+  background: none;
+  cursor:pointer;
+}
+
+@import '_inactive/dropdown__button-counter_inactive';

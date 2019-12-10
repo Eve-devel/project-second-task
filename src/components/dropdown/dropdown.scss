@@ -1,0 +1,26 @@
+@import '__selection/dropdown__selection';
+@import '__menu/dropdown__menu';
+@import '__option/dropdown__option';
+@import '__controls/dropdown__controls';
+@import '__icon/dropdown__icon';
+@import '__button-counter/dropdown__button-counter';
+@import '__button/dropdown__button';
+
+.iqdropdown{
+  box-sizing:border-box;
+  align-items:center;
+  border:1px solid rgba(31, 32, 65, 0.25);
+  border-radius:4px;
+  display:flex;
+  height:44px;
+  justify-content:space-between;
+  padding-left: 15px;
+  position:relative;
+  width:320px;
+}
+.iqdropdown *::after,.iqdropdown *::before{
+  box-sizing:inherit
+}
+.iqdropdown *:not(input){
+  user-select:none
+}

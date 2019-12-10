@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+@import "../components/button/button";
+@import "../components/button/_color";
+@import "../components/button/_colorless";
+@import "../components/button/_wrapper-gradient-border";
+
+@import "../components/text-types/text-types";
+@import "../components/text-types/__name/text-types__name";
+@import "../components/text-types/__name/_size/text-types__name_size_12";
+@import "../components/text-types/__name/_size/text-types__name_size_14";
+@import "../components/text-types/__name/_size/text-types__name_size_19";
+@import "../components/text-types/__name/_size/text-types__name_size_24";
+@import "../components/text-types/__wrapper/text-types__wrapper";
+@import "../components/text-types/_type/text-types_type_Body";
+@import "../components/text-types/_type/text-types_type_Body_width";
+@import "../components/text-types/_type/text-types_type_H1";
+@import "../components/text-types/_type/text-types_type_H2_bold";
+@import "../components/text-types/_type/text-types_type_H3_bold";
+@import "../components/text-types/_type/text-types_type_H2_normal";
+@import "../components/text-types/_type/text-types_type_H3_normal";
+
+@import "../components/header/header";
+@import "../components/header/__nav/header__nav";
+@import "../components/header/__logo/header__logo";
+@import "../components/header/__button-registration/header__button-registration";
+@import "../components/header/__button-entrance/header__button-entrance";
+
+@import '../components/logo/logo';
+
+@import "../fonts/fonts";
+
+@import "../components/material-icons/material-icons";
+
+@import "../components/nav/nav";
+
+@import "../components/colors/colors";
+@import "../components/colors/__rectangle/colors__rectangle";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_green";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_purple";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_shade5";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_shade25";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_shade50";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_shade75";
+@import "../components/colors/__rectangle/_fill/colors__rectangle_fill_shade100";
+@import "../components/colors/__text/colors__text";
+@import "../components/colors/__wrapper/colors__wrapper";
+
+@import "../components/wrapper/_type/wrapper_type_horizontal";
+@import "../components/wrapper/_type/wrapper_type_vertical";
+
+@import "../components/text-field/text-field";
+
+@import '../components/elements/__main/elements__main';
+
+@import "../components/dropdown/dropdown";
