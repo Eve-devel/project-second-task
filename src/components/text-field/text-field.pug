@@ -1,5 +1,5 @@
 mixin text-field(options = {})
-  div.text-field
+  div.text-field__wrapper
     div.text-field__name
       +text('H3-bold', options.name)
       +text('H3-normal', options.state, 'text-field__name_state')
@@ -7,5 +7,5 @@ mixin text-field(options = {})
           id=options.id
           placeholder=options.placeholder
           value=options.content
-          class='text-field__field text-field__content text-types_type_Body'
+          class='text-field text-types_type_Body'
           )

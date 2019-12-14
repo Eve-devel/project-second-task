@@ -21,7 +21,13 @@ block content
       content: 'This is pretty awesome',
       state: 'Hover/Focus'
     })
-    +dropdown('Dropdown', 'guests', ['Взрослые', 'Дети', 'Младенцы'], [], true, 'Default')
+    +dropdown({
+      name: 'Dropdown',
+      about: 'guests',
+      items: ['Взрослые', 'Дети', 'Младенцы'],
+      defaultcounts: [],
+      need_button: true,
+      state: 'Default'})
     +text-field({
       type: 'text',
       id: 'birthday',
@@ -29,7 +35,13 @@ block content
       state: 'Default',
       placeholder: 'ДД.ММ.ГГГГ'
     })
-    +dropdown('Dropdown', 'rooms', ['Спальни', 'Кровати', 'Ванные комнаты'], [2, 2], false)
+    +dropdown({
+      name: 'Dropdown',
+      about: 'rooms',
+      items: ['Спальни', 'Кровати', 'Ванные комнаты'],
+      defaultcounts: [2, 2],
+      need_button: false
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")

@@ -1,20 +1,20 @@
-mixin dropdown(name, about, items, defaultcounts, need_button, state)
-  div.text-field
-    div.text-field__name
-      +text('H3-bold', name)
-      +text('H3-normal', state, 'text-field__name_state')
-    div(class= about).iqdropdown
-      p.dropdown__selection.text-types_type_Body
+mixin dropdown(options={})
+  div.dropdown__wrapper
+    div.dropdown__name
+      +text('H3-bold', options.name)
+      +text('H3-normal', options.state, 'dropdown__name_state')
+    div(class= options.about).iqdropdown
+      +text('Body', '', 'dropdown__selection')
       div.iqdropdown-menu
-        div(class='iqdropdown-menu-option' data-id='item1' data-defaultcount=defaultcounts[0] data-mincount="0")
+        div(class='iqdropdown-menu-option' data-id='item1' data-defaultcount=options.defaultcounts[0] data-mincount="0")
           div
-            p.text-types_type_H3_bold= items[0]
-        div(class='iqdropdown-menu-option' data-id='item2' data-defaultcount=defaultcounts[1] data-mincount="0")
+            +text('H3-bold', options.items[0])
+        div(class='iqdropdown-menu-option' data-id='item2' data-defaultcount=options.defaultcounts[1] data-mincount="0")
           div
-            p.text-types_type_H3_bold= items[1]
-        div(class='iqdropdown-menu-option' data-id='item3' data-defaultcount=defaultcounts[2] data-mincount="0")
+            +text('H3-bold', options.items[1])
+        div(class='iqdropdown-menu-option' data-id='item3' data-defaultcount=options.defaultcounts[2] data-mincount="0")
           div
-            p.text-types_type_H3_bold= items[2]
-        if need_button
+            +text('H3-bold', options.items[2]) 
+        if options.need_button
           button.text-types_type_H3_bold.dropdown__button.dropdown__button_type_clear= 'Очистить'
           button(class='text-types_type_H3_bold dropdown__button dropdown__button_type_close' type= 'reset')= 'Применить'
