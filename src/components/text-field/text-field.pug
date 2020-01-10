@@ -1,11 +1,24 @@
 mixin text-field(options = {})
-  div.text-field__wrapper
+  div.text-field__wrapper-with-name
     div.text-field__name
       +text('H3-bold', options.name)
       +text('H3-normal', options.state, 'text-field__name_state')
-    input(type=options.type
-          id=options.id
-          placeholder=options.placeholder
-          value=options.content
-          class='text-field text-types_type_Body'
-          )
+    if options.button == 'yes'
+      div.text-field__wrapper
+        input(type=options.type
+              id=options.id
+              placeholder=options.placeholder
+              value=options.content
+              class='text-field_with-button text-types_type_Body'+' '+options.class
+              )
+        input(type='submit'
+              value='arrow_forward'
+              class='material-icons text-field__button'
+              )
+    else
+      input(type=options.type
+            id=options.id
+            placeholder=options.placeholder
+            value=options.content
+            class='text-field text-types_type_Body'+' '+options.class
+            )

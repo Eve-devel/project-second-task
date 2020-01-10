@@ -1,5 +1,8 @@
-@import '__wrapper/text-field__wrapper';
+@import '__wrapper-with-name/text-field__wrapper-with-name';
 @import '__name/text-field__name';
+@import '__button/text-field__button';
+@import '_with-button/text-field_with-button';
+@import '__wrapper/text-field__wrapper';
 
 .text-field {
   width: 100%;
@@ -10,7 +13,7 @@
   border-radius: 4px;
   margin-top: 5px;
   padding-left: 15px;
-  color: $dark-shade-25;
+  color: $dark-shade-75;
 }
 .text-field:hover {
   color: $dark-shade-75;

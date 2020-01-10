@@ -27,7 +27,8 @@ block content
       items: ['Взрослые', 'Дети', 'Младенцы'],
       defaultcounts: [],
       need_button: true,
-      state: 'Default'})
+      state: 'Default'
+    })
     +text-field({
       type: 'text',
       id: 'birthday',
@@ -41,6 +42,12 @@ block content
       items: ['Спальни', 'Кровати', 'Ванные комнаты'],
       defaultcounts: [2, 2],
       need_button: false
+    })
+    +text-field({
+      type: 'email',
+      name: 'subscription text field',
+      placeholder: 'Email',
+      button: 'yes'
     })
 
 block scripts
