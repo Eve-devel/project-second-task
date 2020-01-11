@@ -7,6 +7,7 @@ block title
 block content
   include ../../components/text-field/text-field.pug
   include ../../components/dropdown/dropdown.pug
+  include ../../components/date-dropdown/date-dropdown.pug
 
   .elements__main
     +text-field({
@@ -26,7 +27,7 @@ block content
       about: 'guests',
       items: ['Взрослые', 'Дети', 'Младенцы'],
       defaultcounts: [],
-      need_button: true,
+      button: true,
       state: 'Default'
     })
     +text-field({
@@ -40,15 +41,15 @@ block content
       name: 'Dropdown',
       about: 'rooms',
       items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-      defaultcounts: [2, 2],
-      need_button: false
+      defaultcounts: [2, 2]
     })
     +text-field({
       type: 'email',
       name: 'subscription text field',
       placeholder: 'Email',
-      button: 'yes'
+      button: true
     })
+    +date-dropdown()
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -56,3 +57,4 @@ block scripts
   script(src='../../components/dropdown/dropdown.js')
   script(src="https://unpkg.com/imask")
   script(src='../../components/text-field/text-field.js')
+  script(src='../../components/date-dropdown/date-dropdown.js')

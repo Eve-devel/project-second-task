@@ -14,7 +14,7 @@ mixin dropdown(options={})
             +text('H3-bold', options.items[1])
         div(class='iqdropdown-menu-option' data-id='item3' data-defaultcount=options.defaultcounts[2] data-mincount="0")
           div
-            +text('H3-bold', options.items[2]) 
-        if options.need_button
+            +text('H3-bold', options.items[2])
+        if options.button
           button.text-types_type_H3_bold.dropdown__button.dropdown__button_type_clear= 'Очистить'
           button(class='text-types_type_H3_bold dropdown__button dropdown__button_type_close' type= 'reset')= 'Применить'

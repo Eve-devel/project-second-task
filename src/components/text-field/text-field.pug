@@ -3,7 +3,7 @@ mixin text-field(options = {})
     div.text-field__name
       +text('H3-bold', options.name)
       +text('H3-normal', options.state, 'text-field__name_state')
-    if options.button == 'yes'
+    if options.button 
       div.text-field__wrapper
         input(type=options.type
               id=options.id
