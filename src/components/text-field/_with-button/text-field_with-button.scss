@@ -1,5 +1,5 @@
 .text-field_with-button {
-  height: 44px;
+  height: 100%;
   width: 100%;
   background: #FFFFFF;
   padding: 0 0 0 15px;
@@ -10,4 +10,8 @@
 
 .text-field_with-button::placeholder {
   color: $dark-shade-25;
+}
+.text-field_with-button:focus {
+  outline: none;
+  color: $dark-shade-75;
 }

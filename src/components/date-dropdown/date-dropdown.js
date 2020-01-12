@@ -7,7 +7,6 @@
         containerBuilt = false,
         baseTemplate = '' +
             '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
             '</div>',
@@ -19,7 +18,7 @@
             firstDay: '',
             weekends: [6, 0],
             dateFormat: '',
-            altField: '#pig',
+            altField: '.filter-date-dropdown',
             altFieldDateFormat: 'd.m',
             toggleSelected: false,
             keyboardNav: true,
@@ -75,13 +74,11 @@
             minutesStep: 1,
 
             // events
+            //separation date of first and second dropdowns
             onSelect: (formattedDate) => {
                         if (formattedDate.length > 1) {
-                          $('#first').val(formattedDate.split(" - ")[0]);
-                          $('#second').val(formattedDate.split(" - ")[1]);
-
-                          this.applyButton.style.color = this.colorPurple;
-                          this.selectedDates = formattedDate;
+                          $('.first-date-dropdown').val(formattedDate.split(' - ')[0]);
+                          $('.second-date-dropdown').val(formattedDate.split(' - ')[1]);
                         }
                       },
             onShow: '',
@@ -702,8 +699,8 @@
                 altValues = altValues.join(this.opts.multipleDatesSeparator);
                 this.$altField.val(altValues);
             }
-
-            value = value.join(this.opts.multipleDatesSeparator);
+        //separation date of first and second dropdowns
+            value = value[0];
 
             this.$el.val(value)
         },
@@ -2243,3 +2240,9 @@
     };
 })();
  })(window, jQuery);
+// Calender show if click second date-dropdown or filter date-dropdown and buttons
+document.querySelector('.second-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+document.querySelector('.filter-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+var AllButton = document.querySelectorAll('.date-dropdown__button');
+AllButton[0].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+AllButton[1].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});

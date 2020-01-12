@@ -1,4 +1,5 @@
-var element = document.querySelector('.birthday');
+var element1 = document.querySelector('.first-date-dropdown');
+var element2 = document.querySelector('.second-date-dropdown');
 var maskOptions = {
   mask: 'DD.MM.YY00',
   blocks: {
@@ -20,4 +21,5 @@ var maskOptions = {
     }
   }
 };
-var mask = IMask(element, maskOptions);
+var mask1 = IMask(element1, maskOptions);
+var mask2 = IMask(element2, maskOptions);

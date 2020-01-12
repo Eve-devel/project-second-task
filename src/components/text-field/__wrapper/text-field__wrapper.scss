@@ -8,3 +8,12 @@
   margin-top: 5px;
   display: flex;
 }
+.text-field__wrapper:hover {
+  color: $dark-shade-75;
+  border: 1px solid $dark-shade-50;
+}
+.text-field__wrapper:focus {
+  outline: none;
+  color: $dark-shade-75;
+  border: 1px solid $dark-shade-50;
+}

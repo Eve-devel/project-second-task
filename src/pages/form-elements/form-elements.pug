@@ -32,7 +32,7 @@ block content
     })
     +text-field({
       type: 'text',
-      id: 'birthday',
+      class: 'birthday',
       name: 'masked text field',
       state: 'Default',
       placeholder: 'ДД.ММ.ГГГГ'
@@ -49,7 +49,10 @@ block content
       placeholder: 'Email',
       button: true
     })
-    +date-dropdown()
+    +date-dropdown({
+      first_name: 'date Dropdown',
+      second_name: 'date Dropdown'
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -58,3 +61,4 @@ block scripts
   script(src="https://unpkg.com/imask")
   script(src='../../components/text-field/text-field.js')
   script(src='../../components/date-dropdown/date-dropdown.js')
+  script(src='../../components/date-dropdown/__mask/date-dropdown__mask.js')
