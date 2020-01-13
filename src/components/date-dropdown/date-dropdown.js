@@ -24,7 +24,7 @@
             keyboardNav: true,
 
             position: 'bottom left',
-            offset: 12,
+            offset: 5.56,
 
             view: 'days',
             minView: 'days',
@@ -45,18 +45,18 @@
             multipleDatesSeparator: ' - ',
             range: true,
 
-            todayButton: false,
             clearButton: true,
+            applyButton: true,
 
             showEvent: 'focus',
             autoClose: false,
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
-            nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
+            prevHtml: '<span class="material-icons">arrow_back</span>',
+            nextHtml: '<span class="material-icons">arrow_forward</span>',
             navTitles: {
-                days: 'MM, <i>yyyy</i>',
+                days: 'MM <i>yyyy</i>',
                 months: 'yyyy',
                 years: 'yyyy1 - yyyy2'
             },
@@ -583,17 +583,6 @@
             })
         },
 
-        today: function () {
-            this.silent = true;
-            this.view = this.opts.minView;
-            this.silent = false;
-            this.date = new Date();
-
-            if (this.opts.todayButton instanceof Date) {
-                this.selectDate(this.opts.todayButton)
-            }
-        },
-
         clear: function () {
             this.selectedDates = [];
             this.minRange = '';
@@ -605,6 +594,11 @@
             }
         },
 
+        //Change Today function to Apply function
+          apply: function () {
+
+              $('.datepicker-here').datepicker().data('datepicker').hide()
+          },
         /**
          * Updates datepicker options
          * @param {String|Object} param - parameter's name to update. If object then it will extend current options
@@ -797,7 +791,7 @@
                     top = dims.top + dims.height - selfDims.height;
                     break;
                 case 'left':
-                    left = dims.left;
+                    left = dims.left - dims.height/4.2;
                     break;
                 case 'center':
                     if (/left|right/.test(main)) {
@@ -1484,8 +1478,8 @@
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
             months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-            today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1816,7 +1810,8 @@
         '<div class="datepicker--nav-title">#{title}</div>' +
         '<div class="datepicker--nav-action" data-action="next">#{nextHtml}</div>',
         buttonsContainerTemplate = '<div class="datepicker--buttons"></div>',
-        button = '<span class="datepicker--button" data-action="#{action}">#{label}</span>',
+        button_clear = '<span class="datepicker--button" data-action="#{action}">#{label}</span>',
+        button_apply = '<span class="datepicker--button datepicker--button_apply" data-action="#{action}">#{label}</span>',
         datepicker = $.fn.datepicker,
         dp = datepicker.Constructor;
 
@@ -1849,11 +1844,11 @@
         },
 
         _addButtonsIfNeed: function () {
-            if (this.opts.todayButton) {
-                this._addButton('today')
-            }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton('apply')
             }
         },
 
@@ -1879,8 +1874,13 @@
             var data = {
                     action: type,
                     label: this.d.loc[type]
-                },
-                html = dp.template(button, data);
+                };
+                //Appropriation button_apply class to Applay button
+                if (data.action == 'clear'){
+                  html = dp.template(button_clear, data);
+                } else {
+                  html = dp.template(button_apply, data);
+                };
 
             if ($('[data-action=' + type + ']', this.$buttonsContainer).length) return;
             this.$buttonsContainer.append(html);
