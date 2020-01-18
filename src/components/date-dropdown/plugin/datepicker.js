@@ -19,7 +19,7 @@
             weekends: [6, 0],
             dateFormat: '',
             altField: '.filter-date-dropdown',
-            altFieldDateFormat: 'd.m',
+            altFieldDateFormat: 'd M',
             toggleSelected: false,
             keyboardNav: true,
 
@@ -1477,7 +1477,7 @@
             daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
             months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            monthsShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
             clear: 'Очистить',
             apply: 'Применить',
             dateFormat: 'dd.mm.yyyy',
@@ -2246,3 +2246,4 @@ document.querySelector('.filter-date-dropdown').addEventListener('click', () => 
 var AllButton = document.querySelectorAll('.date-dropdown__button');
 AllButton[0].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
 AllButton[1].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+document.querySelector('.filter-date-dropdown__button').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});

@@ -1,0 +1,12 @@
+.checkbox__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox__input::after{
+  content: 'f';
+  width: 20px;
+  height: 20px;
+  background: red;
+}

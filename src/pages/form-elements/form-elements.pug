@@ -8,6 +8,8 @@ block content
   include ../../components/text-field/text-field.pug
   include ../../components/dropdown/dropdown.pug
   include ../../components/date-dropdown/date-dropdown.pug
+  include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+  include ../../components/checkbox/checkbox.pug
 
   .elements__main
     +text-field({
@@ -53,12 +55,19 @@ block content
       first_name: 'date Dropdown',
       second_name: 'date Dropdown'
     })
+    +filter-date-dropdown({
+      name: 'filter date dropdown'
+    })
+    +checkbox-buttons({
+      texts: ['Можно курить', 'Можно с питомцами', "Можно пригласить гостей\n(до 10 человек)"]
+    })
+
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
-  script(src='../../components/dropdown/plagin/item-quantity-dropdown.min.js')
+  script(src='../../components/dropdown/plugin/item-quantity-dropdown.min.js')
   script(src='../../components/dropdown/dropdown.js')
   script(src="https://unpkg.com/imask")
   script(src='../../components/text-field/text-field.js')
-  script(src='../../components/date-dropdown/date-dropdown.js')
+  script(src='../../components/date-dropdown/plugin/datepicker.js')
   script(src='../../components/date-dropdown/__mask/date-dropdown__mask.js')
