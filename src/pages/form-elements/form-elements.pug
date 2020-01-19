@@ -11,6 +11,7 @@ block content
   include ../../components/filter-date-dropdown/filter-date-dropdown.pug
   include ../../components/checkbox/checkbox.pug
   include ../../components/radio/radio.pug
+  include ../../components/toggle/toggle.pug
 
   .elements__main
     +text-field({
@@ -70,6 +71,14 @@ block content
       texts: ['Мужчина', 'Женщина'],
       name: 'Radio Buttons'
     })
+    +text('H3-bold', 'toggle')
+    +toggle({
+      text: 'Получать спецпредложения'
+    })
+    +toggle({
+      text: 'Получать спецпредложения'
+    })
+
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
