@@ -1,0 +1,15 @@
+.radio__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.radio__input:checked+.radio__box {
+    border-color: $purple;
+}
+.radio__input:checked+.radio__box .radio__check {
+    visibility: visible;
+}
+.radio__input:checked~.radio__text {
+    color: $dark-shade-75;
+}

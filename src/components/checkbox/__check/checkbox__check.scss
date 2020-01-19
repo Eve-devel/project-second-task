@@ -1,7 +1,7 @@
 .checkbox__check {
   width: 6px;
   height: 8px;
-  background-image: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+  background-image: $main-gradient;
   transform: rotate(45deg);
   position: absolute;
   top: 4.05px;

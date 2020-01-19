@@ -1,0 +1,9 @@
+mixin radio(options={})
+  +text('H3-bold', options.name, 'radio__name')
+  div
+    each text in options.texts
+      label.radio__label
+        input(type='radio' name='sex' class='radio__input')
+        span.radio__box
+          span.radio__check
+        div.radio__text.text-types_type_Body=text

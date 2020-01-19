@@ -10,6 +10,7 @@ block content
   include ../../components/date-dropdown/date-dropdown.pug
   include ../../components/filter-date-dropdown/filter-date-dropdown.pug
   include ../../components/checkbox/checkbox.pug
+  include ../../components/radio/radio.pug
 
   .elements__main
     +text-field({
@@ -65,7 +66,10 @@ block content
              ],
       name: 'Checkbox Buttons'
     })
-
+    +radio({
+      texts: ['Мужчина', 'Женщина'],
+      name: 'Radio Buttons'
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
