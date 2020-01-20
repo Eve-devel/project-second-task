@@ -1,0 +1,12 @@
+.like-button__border {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+  background: $dark-shade-25;
+}
+.like-button_on.like-button__border {
+  background: $main-gradient;
+}

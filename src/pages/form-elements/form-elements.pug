@@ -12,6 +12,7 @@ block content
   include ../../components/checkbox/checkbox.pug
   include ../../components/radio/radio.pug
   include ../../components/toggle/toggle.pug
+  include ../../components/like-button/like-button.pug
 
   .elements__main
     +text-field({
@@ -78,7 +79,14 @@ block content
     +toggle({
       text: 'Получать спецпредложения'
     })
-
+    +text('H3-bold', 'Like Button')
+    div
+      +like-button({
+        val: '2'
+      })
+      +like-button({
+        val: '12'
+      })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -88,3 +96,4 @@ block scripts
   script(src='../../components/text-field/text-field.js')
   script(src='../../components/date-dropdown/plugin/datepicker.js')
   script(src='../../components/date-dropdown/__mask/date-dropdown__mask.js')
+  script(src='../../components/like-button/like-button.js')

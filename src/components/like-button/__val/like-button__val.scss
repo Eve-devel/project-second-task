@@ -1,0 +1,12 @@
+.like-button__val {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  color: $dark-shade-25;
+}
+.like-button_on .like-button__val {
+  color: $purple;
+}
