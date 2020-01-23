@@ -1,0 +1,16 @@
+.like-button__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.like-button__input:checked+.like-button__border {
+  background: $main-gradient;
+}
+.like-button__input:checked+.like-button__border .like-button__val::before {
+    content:'favorite';
+    color: $purple;
+}
+.like-button__input:checked+.like-button__border .like-button__val {
+    color: $purple;
+}

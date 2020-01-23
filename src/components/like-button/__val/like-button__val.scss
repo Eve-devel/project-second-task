@@ -7,6 +7,14 @@
   text-align: center;
   color: $dark-shade-25;
 }
-.like-button_on .like-button__val {
-  color: $purple;
+.like-button__val::before {
+  content: 'favorite_border';
+  font-family: MaterialIcons;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+  color: $dark-shade-25;
 }
