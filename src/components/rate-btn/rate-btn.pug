@@ -1,0 +1,10 @@
+mixin rate-btn(options={})
+  div.rate-btn
+    - for(var i=0; i<5-options.val; i++)
+      div.rate-btn__stars
+        span.material-icons.rate-btn__star star_border
+        span.material-icons.rate-btn__star-for-hover star
+    - for(var i=5-options.val; i<5; i++)
+      div.rate-btn__stars
+        span.material-icons.rate-btn__star star
+        span.material-icons.rate-btn__star-for-hover star

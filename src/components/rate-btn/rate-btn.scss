@@ -1,0 +1,10 @@
+@import '__stars/rate-btn__stars';
+@import '__star/rate-btn__star';
+@import '__star-for-hover/rate-btn__star-for-hover';
+
+.rate-btn {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
