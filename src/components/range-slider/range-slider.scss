@@ -1,0 +1,63 @@
+@import '../../../node_modules/nouislider/distribute/nouislider';
+
+.range-slider {
+  width: 266px;
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  &__values {
+    color: $dark-shade-50;
+  }
+
+  & #range-slider__line {
+
+    &.noUi-target {
+      background: #FFFFFF;
+      border: 1px solid $dark-shade-25;
+      box-sizing: border-box;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    &.noUi-horizontal {
+      height: 6px;
+    }
+
+    & .noUi-connects {
+      position: static;
+    }
+
+    & .noUi-connect {
+      background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+      border-radius: 3px;
+      height: 6px;
+      box-sizing: border-box;
+      top: -1px;
+    }
+
+    & .noUi-handle {
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+      border: 2px solid #FFFFFF;
+      border-radius: 10px;
+      box-sizing: content-box;
+      box-shadow: none;
+      right: -8px;
+      cursor: pointer;
+
+      &::before, &::after {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

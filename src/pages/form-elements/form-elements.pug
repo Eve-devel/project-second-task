@@ -1,5 +1,6 @@
 extends ../layouts/ui-kit
 
+
 block title
   | Form Elements
 
@@ -14,6 +15,7 @@ block content
   include ../../components/toggle/toggle.pug
   include ../../components/like-button/like-button.pug
   include ../../components/rate-btn/rate-btn.pug
+  include ../../components/range-slider/range-slider.pug
 
   .elements__main
     +text-field({
@@ -96,6 +98,7 @@ block content
       +rate-btn({
         val: '5'
       })
+    +range-slider()
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -107,3 +110,5 @@ block scripts
   script(src='../../components/date-dropdown/__mask/date-dropdown__mask.js')
   script(src='../../components/like-button/like-button.js')
   script(src='../../components/rate-btn/rate-btn.js')
+  script(src='../../components/range-slider/range-slider.js')
+  script(src='../../../node_modules/nouislider/distribute/nouislider.min.js')
