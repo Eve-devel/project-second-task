@@ -1,6 +1,58 @@
-@import '__name/checkbox__name';
-@import '__label/checkbox__label';
-@import '__input/checkbox__input';
-@import '__box/checkbox__box';
-@import '__check/checkbox__check';
-@import '__text/checkbox__text';
+@import '../../style/variables.scss';
+
+.checkbox {
+
+  &__name {
+      margin-bottom: 16.56px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked+.checkbox__box {
+      border: 1px solid $purple;
+    }
+    &:checked+.checkbox__box .checkbox__check {
+      visibility: visible;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__check {
+    width: 6px;
+    height: 8px;
+    background-image: $main-gradient;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 4.05px;
+    left: 6.05px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 66% 0, 66% 75%, 0 75%);
+    visibility: hidden;
+  }
+
+  &__text {
+    white-space: pre;
+    margin-left: 30px;
+    color: $dark-shade-50;
+    line-height: 18px;
+  }
+
+}
