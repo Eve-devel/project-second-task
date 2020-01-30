@@ -1,0 +1,11 @@
+.checkbox__check {
+  width: 6px;
+  height: 8px;
+  background-image: $main-gradient;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 4.05px;
+  left: 6.05px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 66% 0, 66% 75%, 0 75%);
+  visibility: hidden;
+}

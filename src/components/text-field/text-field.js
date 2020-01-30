@@ -1,6 +1,3 @@
-import './text-field.scss';
-import IMask from 'imask';
-
 var element = document.querySelector('.birthday');
 var maskOptions = {
   mask: 'DD.MM.YY00',

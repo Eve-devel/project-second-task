@@ -1,9 +1,8 @@
 mixin checkbox-buttons(options={})
-  .checkbox
-    h3.checkbox__name=options.name
-    each text in options.texts
-      label.checkbox__label
-        input(type='checkbox' class='checkbox__input')
-        span.checkbox__box
-          span.checkbox__check
-        .checkbox__text=text
+  +text('H3-bold', options.name, 'checkbox__name')
+  each text in options.texts
+    label.checkbox__label
+      input(type='checkbox' class='checkbox__input')
+      span.checkbox__box
+        span.checkbox__check
+      div.checkbox__text.text-types_type_Body=text

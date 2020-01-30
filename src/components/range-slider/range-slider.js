@@ -1,4 +1,3 @@
-import './range-slider.scss';
 import noUiSlider from 'nouislider';
 
 var rangeSlider = document.getElementById('range-slider__line');

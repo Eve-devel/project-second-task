@@ -22,7 +22,6 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "imask": "^6.0.1",
     "item-quantity-dropdown": "^2.0.2",
     "nouislider": "^14.1.1",
     "parcel-bundler": "^1.12.4",
@@ -31,7 +30,6 @@
     "posthtml-img-autosize": "^0.1.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "style": "0.0.3",
     "uncss": "^0.17.2"
   }
 }
