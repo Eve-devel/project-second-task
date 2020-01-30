@@ -1,3 +1,4 @@
+@import './global.scss';
 @import './variables.scss';
 
 @import "../components/button/button";
@@ -49,7 +50,6 @@
 @import "../components/wrapper/_type/wrapper_type_horizontal";
 @import "../components/wrapper/_type/wrapper_type_vertical";
 
-@import "../components/text-field/text-field";
 
 @import '../components/elements/__main/elements__main';
 
@@ -59,8 +59,6 @@
 
 @import '../components/filter-date-dropdown/filter-date-dropdown';
 
-@import '../components/checkbox/checkbox';
-
 @import '../components/radio/radio';
 
 @import '../components/toggle/toggle';
@@ -68,5 +66,3 @@
 @import '../components/like-button/like-button';
 
 @import '../components/rate-btn/rate-btn';
-
-@import '../components/range-slider/range-slider';

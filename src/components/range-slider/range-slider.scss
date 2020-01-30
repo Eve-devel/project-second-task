@@ -1,4 +1,5 @@
-@import '../../../node_modules/nouislider/distribute/nouislider';
+@import '../../style/variables.scss';
+@import '../../../node_modules/nouislider/distribute/nouislider.css';
 
 .range-slider {
   width: 266px;
