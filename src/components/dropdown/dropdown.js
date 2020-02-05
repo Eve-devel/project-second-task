@@ -1,3 +1,5 @@
+import './dropdown.scss'
+
 $(document).ready(function() {
   $('.guests').iqDropdown({
     maxItems: Infinity,
@@ -16,8 +18,7 @@ $(document).ready(function() {
       counterCls: 'counter text-types_type_H3_bold'
     },
     onChange: function(id, count, totalItems) {
-      console.log(id, count, totalItems);
-    },
+      },
     beforeDecrement: function(id, itemCount) {
       if ((id == "item1") && (itemCount.item2 > 0 || itemCount.item3 > 0) && (itemCount.item1 == 1)) {
         return false;
@@ -48,7 +49,6 @@ $(document).ready(function() {
       counterCls: 'counter text-types_type_H3_bold'
     },
     onChange: function(id, count, totalItems) {
-      console.log(id, count, totalItems);
     },
     beforeDecrement: function(id, itemCount) {
       if ((id == "item1") && (itemCount.item2 > 0 || itemCount.item3 > 0) && (itemCount.item1 == 1)) {
