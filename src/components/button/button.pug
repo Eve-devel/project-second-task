@@ -1,3 +1,13 @@
-div.button.button_colorless
-  input(class="button_wrapper-gradient-border" type="submit" value="ВОЙТИ")
-input(class="button button_color" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ")
+mixin button(options={})
+  if options.type == 'color'
+    div
+      .button__gradient-wrapper
+        input(class="button button_type_color" type="submit" value=options.text)
+  else if options.type == 'button'
+    .button__gradient-wrapper.button__gradient-wrapper_with-button
+      input(class="button button_type_color" type="submit" value=options.text)
+      input(type='submit' value='arrow_forward' class='material-icons button__button')
+  else
+    div
+      .button__gradient-wrapper
+        input(class="button button_type_colorless" type="submit" value=options.text)

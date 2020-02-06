@@ -16,6 +16,7 @@ block content
   include ../../components/like-button/like-button.pug
   include ../../components/rate-btn/rate-btn.pug
   include ../../components/range-slider/range-slider.pug
+  include ../../components/button/button.pug
 
   .elements__main
     +text-field({
@@ -99,6 +100,19 @@ block content
         val: '5'
       })
     +range-slider()
+    h3='buttons'
+    +button({
+      type: 'color',
+      text: 'click me'
+    })
+    +button({
+      type: 'colorless',
+      text: 'click me'
+    })
+    +button({
+      type: 'button',
+      text: 'перейти к оплате'
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -111,3 +125,4 @@ block scripts
   script(src='../../components/like-button/like-button.js')
   script(src='../../components/rate-btn/rate-btn.js')
   script(src='../../components/range-slider/range-slider.js')
+  script(src='../../components/button/button.js')
