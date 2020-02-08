@@ -1,9 +1,18 @@
-mixin checkbox-buttons(options={})
+mixin checkbox(options={})
   .checkbox
-    h3.checkbox__name=options.name
-    each text in options.texts
-      label.checkbox__label
-        input(type='checkbox' class='checkbox__input')
-        span.checkbox__box
-          span.checkbox__check
-        .checkbox__text=text
+    if options.list
+      .checkbox__select(data-name=options.name)
+        each item in options.texts
+          label.checkbox__label
+            input(type='checkbox' class='checkbox__input' checked=item.checked)
+            span.checkbox__box
+              span.checkbox__check
+            .checkbox__text=item.text
+    else
+      h3.checkbox__name=options.name
+      each item in options.texts
+        label.checkbox__label
+          input(type='checkbox' class='checkbox__input' checked=item.checked)
+          span.checkbox__box
+            span.checkbox__check
+          .checkbox__text=item.text

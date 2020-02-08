@@ -66,12 +66,15 @@ block content
     +filter-date-dropdown({
       name: 'filter date dropdown'
     })
-    +checkbox-buttons({
-      texts: ['Можно курить',
-              'Можно с питомцами',
-              'Можно пригласить гостей\n(до 10 человек)'
+    +checkbox({
+      texts: [{text:'Можно курить'},
+              {text:'Можно с питомцами',
+               checked: 'checked'},
+              {text:'Можно пригласить гостей\n(до 10 человек)',
+               checked: 'checked'}
              ],
-      name: 'Checkbox Buttons'
+      name: 'Checkbox Buttons',
+      checked: 'checked'
     })
     +radio({
       texts: ['Мужчина', 'Женщина'],
@@ -113,6 +116,19 @@ block content
     +button({
       type: 'button',
       text: 'перейти к оплате'
+    })
+    +checkbox({
+      list: true,
+      texts: [{text:'Завтрак'},
+              {text:'Письменный стол', checked: 'checked'},
+              {text:'Стул для кормления', checked: 'checked'},
+              {text:'Кроватка', checked: 'checked'},
+              {text:'Телевизор'},
+              {text:'Шампунь'},
+              {text:'Телевизор'},
+              {text:'Шампунь'}
+             ],
+      name: 'expandable checkbox list'
     })
     +pagination({
       caption: '1 – 12 из 100+ вариантов аренды'
