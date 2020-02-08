@@ -32,6 +32,7 @@ import './checkbox.scss'
 		$('html, body').on('click', function(e){
 			if ($(e.target).closest('.checkbox__select').length == 0){
 				$('.checkbox__popup').css('display', 'none');
+				$('.checkbox__button').css('transform', 'none');
 			}
 		});
 	};
