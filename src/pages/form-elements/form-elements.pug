@@ -17,6 +17,7 @@ block content
   include ../../components/rate-btn/rate-btn.pug
   include ../../components/range-slider/range-slider.pug
   include ../../components/button/button.pug
+  include ../../components/pagination/pagination.pug
 
   .elements__main
     +text-field({
@@ -113,6 +114,9 @@ block content
       type: 'button',
       text: 'перейти к оплате'
     })
+    +pagination({
+      caption: '1 – 12 из 100+ вариантов аренды'
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -126,3 +130,4 @@ block scripts
   script(src='../../components/rate-btn/rate-btn.js')
   script(src='../../components/range-slider/range-slider.js')
   script(src='../../components/button/button.js')
+  script(src='../../components/pagination/pagination.js')
