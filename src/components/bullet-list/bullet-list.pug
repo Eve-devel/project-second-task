@@ -1,0 +1,9 @@
+mixin bullet-list(options={})
+  .bullet-list
+    h3.bullet-list__name=options.name
+    ul
+      each item in options.items
+        .bullet-list__item
+          svg.bullet-list__marker
+            ellipse(cx='5.21429' cy='5' rx='5.21429' ry='5' fill='#1F2041' fill-opacity='0.25')
+          li.bullet-list__text=item

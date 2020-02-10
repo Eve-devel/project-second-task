@@ -18,6 +18,7 @@ block content
   include ../../components/range-slider/range-slider.pug
   include ../../components/button/button.pug
   include ../../components/pagination/pagination.pug
+  include ../../components/bullet-list/bullet-list.pug
 
   .elements__main
     +text-field({
@@ -141,6 +142,12 @@ block content
     +pagination({
       caption: '1 – 12 из 100+ вариантов аренды'
     })
+    +bullet-list({
+      name: 'bullet list',
+      items: ['Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00']
+    })
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -155,3 +162,4 @@ block scripts
   script(src='../../components/range-slider/range-slider.js')
   script(src='../../components/button/button.js')
   script(src='../../components/pagination/pagination.js')
+  script(src='../../components/bullet-list/bullet-list.js')

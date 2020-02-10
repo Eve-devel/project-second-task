@@ -1,0 +1,28 @@
+@import '../../style/variables.scss';
+
+.bullet-list {
+
+  &__name {
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
+
+  &__marker {
+    width: 10.43px;
+    height: 10px;
+    margin-right: 10px;
+    color: $dark-shade-25;
+    vertical-align: top;
+  }
+
+  &__text {
+    display: inline;
+    line-height: 14px;
+    vertical-align: top;
+  }
+}
