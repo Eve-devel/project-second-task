@@ -15,4 +15,8 @@ mixin checkbox(options={})
           input(type='checkbox' class='checkbox__input' checked=item.checked)
           span.checkbox__box
             span.checkbox__check
-          .checkbox__text=item.text
+          if item.rich
+            .checkbox__text.checkbox__text_rich=item.text
+            p.checkbox__rich=item.rich
+          else
+            .checkbox__text=item.text
