@@ -2,7 +2,7 @@ mixin icon-text-list(options={})
   .icon-text-list
     each item in options.items
       .icon-text-list__item
-        span.icon-text-list__icon.material-icons=item.icon
+        p.icon-text-list__icon.material-icons=item.icon
         .icon-text-list__texts
-          p.icon-text-list__header=item.header
+          span.icon-text-list__header=item.header
           p=item.text

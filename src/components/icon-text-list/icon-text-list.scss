@@ -4,14 +4,14 @@
 
   &__item {
     border-bottom: 1px solid $dark-shade-10;
-    padding-bottom: 17px;
-    padding-top: 23px;
+    padding-bottom: 20px;
+    padding-top: 21px;
   }
 
   &__icon {
+    display: inline-block;
     font-size: 48px;
-    line-height: 41px;
-    vertical-align: top;
+    line-height: 48px;
     background-color: $purple;
     background-image: $main-gradient;
     -webkit-background-clip: text;
@@ -21,11 +21,10 @@
   &__texts {
     display: inline-block;
     margin-left: 10px;
-    height: 48px;
   }
 
   &__header {
     font-weight: bold;
-    margin-bottom: 6px;
+    line-height: 10px;
   }
 }
