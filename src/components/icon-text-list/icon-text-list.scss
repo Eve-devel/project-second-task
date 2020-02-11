@@ -1,0 +1,31 @@
+@import '../../style/variables.scss';
+
+.icon-text-list {
+
+  &__item {
+    border-bottom: 1px solid $dark-shade-10;
+    padding-bottom: 17px;
+    padding-top: 23px;
+  }
+
+  &__icon {
+    font-size: 48px;
+    line-height: 41px;
+    vertical-align: top;
+    background-color: $purple;
+    background-image: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__texts {
+    display: inline-block;
+    margin-left: 10px;
+    height: 48px;
+  }
+
+  &__header {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+}
