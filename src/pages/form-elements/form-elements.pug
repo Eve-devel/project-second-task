@@ -20,6 +20,7 @@ block content
   include ../../components/pagination/pagination.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/icon-text-list/icon-text-list.pug
+  include ../../components/comment/comment.pug
 
   .elements__main
     +text-field({
@@ -95,7 +96,8 @@ block content
         val: '2'
       })
       +like-button({
-        val: '12'
+        val: '12',
+        checked: 'checked'
       })
     +text('H3-bold', 'Rate Button')
     div
@@ -118,6 +120,14 @@ block content
     +button({
       type: 'button',
       text: 'перейти к оплате'
+    })
+    +comment({
+      comments: [{photo: '../../img/photo.png',
+                  name: 'Мурад Сарафанов',
+                  time: '5 дней назад',
+                  like: {val: '12', checked: 'checked'},
+                  text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                  }]
     })
     +checkbox({
       list: true,
@@ -150,13 +160,17 @@ block content
               'Время прибытия — после 13:00, а выезд до 12:00']
     })
     +icon-text-list({
-      items: [{icon: 'insert_emoticon',
-               header: 'Комфорт',
-               text: 'Шумопоглощающие стены'},
-               {icon: 'location_city',
-                header: 'Удобство',
-                text: 'Окно в каждой из спален'}]
+      items: [
+              {
+                icon: 'insert_emoticon',
+                 header: 'Комфорт',
+                 text: 'Шумопоглощающие стены'},
+               {
+                 icon: 'location_city',
+                 header: 'Удобство',
+                 text: 'Окно в каждой из спален'}]
     })
+
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
@@ -173,3 +187,4 @@ block scripts
   script(src='../../components/pagination/pagination.js')
   script(src='../../components/bullet-list/bullet-list.js')
   script(src='../../components/icon-text-list/icon-text-list.js')
+  script(src='../../components/comment/comment.js')

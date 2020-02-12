@@ -1,0 +1,29 @@
+.comment {
+
+  &__photo {
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+
+  &__header {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__body {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  &__like {
+    margin-left: 3.97px;
+    margin-right: 14.31px;
+  }
+
+  &__text {
+  }
+}

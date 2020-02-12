@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  line-height: 20px;
   text-align: center;
+  line-height: 12px;
   color: $dark-shade-25;
 }
 .like-button__val::before {
@@ -12,9 +12,8 @@
   font-family: MaterialIcons;
   display: inline-block;
   width: 20px;
-  height: 20px;
   font-size: 10px;
+  line-height: 9px;
   text-align: center;
-  line-height: 20px;
   color: $dark-shade-25;
 }

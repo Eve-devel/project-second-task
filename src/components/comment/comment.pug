@@ -1,0 +1,11 @@
+mixin comment(options={})
+  .comment
+    each item in options.comments
+      img.comment__photo(src=item.photo)
+      .comment__header
+        p.comment__name=item.name
+        p=item.time
+      .comment__body
+        .comment__like
+          +like-button(item.like)
+        p.comment__text=item.text
