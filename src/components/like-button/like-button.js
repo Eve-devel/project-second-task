@@ -13,14 +13,25 @@ function changeVal() {
       firstLikesVal = firstLikesVals[j];
     }
   }
-
-  if (this.querySelector('.like-button__val').textContent > firstLikesVal) {
-    var decrVal = this.querySelector('.like-button__val').textContent;
-    decrVal--;
-    this.querySelector('.like-button__val').innerHTML = decrVal;
+  if (this.previousSibling.getAttribute('checked')) {
+    if (this.querySelector('.like-button__val').textContent >= firstLikesVal) {
+      var decrVal = this.querySelector('.like-button__val').textContent;
+      decrVal--;
+      this.querySelector('.like-button__val').innerHTML = decrVal;
+    } else {
+      var incrVal = this.querySelector('.like-button__val').textContent;
+      incrVal++;
+      this.querySelector('.like-button__val').innerHTML = incrVal;
+    }
   } else {
-    var incrVal = this.querySelector('.like-button__val').textContent;
-    incrVal++;
-    this.querySelector('.like-button__val').innerHTML = incrVal;
+    if (this.querySelector('.like-button__val').textContent > firstLikesVal) {
+      var decrVal = this.querySelector('.like-button__val').textContent;
+      decrVal--;
+      this.querySelector('.like-button__val').innerHTML = decrVal;
+    } else {
+      var incrVal = this.querySelector('.like-button__val').textContent;
+      incrVal++;
+      this.querySelector('.like-button__val').innerHTML = incrVal;
+    }
   }
 }
