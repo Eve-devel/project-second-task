@@ -1,4 +1,47 @@
-@import '__input/toggle__input';
-@import '__box/toggle__box';
-@import '__check/toggle__check';
-@import '__text/toggle__text';
+@import '../../style/variables.scss';
+
+.toggle {
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked+.toggle__box {
+      border-color: $purple;
+    }
+
+    &:checked+.toggle__box .toggle__check{
+      background: $main-gradient;
+      left: 23px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #FFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__check {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background: $dark-shade-25;
+    border-radius: 10px;
+  }
+
+  &__text {
+    margin-left: 50px;
+    line-height: 20px;
+    margin-bottom: 14px;
+  }
+}

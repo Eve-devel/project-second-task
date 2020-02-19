@@ -1,8 +1,50 @@
-@import '__wrapper/filter-date-dropdown__wrapper';
-@import '__wrapper-with-name/filter-date-dropdown__wrapper-with-name';
-@import '__button/filter-date-dropdown__button';
+@import '../../style/variables';
 
 .filter-date-dropdown {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 100%;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 5.44px;
+    color: $dark-shade-75;
+    display: flex;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0 0 0 15px;
+    color: $dark-shade-75;
+
+    &::placeholder {
+      color: $dark-shade-75;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+  }
+}
+
+
+
+__input {
     width: 100%;
     height: 100%;
     border: 0px solid transparent;
@@ -12,6 +54,6 @@
     padding: 0 0 0 15px;
     color: $dark-shade-75;
   }
-  .filter-date-dropdown::placeholder {
+  .filter-date-dropdown__input::placeholder {
     color: $dark-shade-75;
 }

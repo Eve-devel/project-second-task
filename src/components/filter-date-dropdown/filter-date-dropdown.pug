@@ -1,6 +1,6 @@
 mixin filter-date-dropdown(options={})
-  div.filter-date-dropdown__wrapper-with-text
-    +text('H3-bold', options.name)
-    div.filter-date-dropdown__wrapper
-      input(class='filter-date-dropdown text-types_type_Body' placeholder='дд мм - дд мм')
+  .filter-date-dropdown
+    h3=options.name
+    .filter-date-dropdown__wrapper
+      input(class='filter-date-dropdown__input' placeholder='дд мм - дд мм')
       span.material-icons.filter-date-dropdown__button expand_more

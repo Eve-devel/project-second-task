@@ -1,3 +1,5 @@
+import './rate-btn.scss';
+
 var allRateBtn = [];
 var allStars = [];
 
@@ -14,7 +16,6 @@ function onRateBtn() {
 }
 
 function toggleStar() {
-  console.log(allStars.indexOf(this))
   if (this.textContent == 'star_border'){
     this.innerHTML = 'star';
     for (var a=allStars.indexOf(this)+1; a<=4; a++) {

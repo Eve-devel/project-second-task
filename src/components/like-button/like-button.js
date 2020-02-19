@@ -1,3 +1,5 @@
+import './like-button.scss';
+
 var firstLikesVals = [];
 var likeElements = [];
 for (var i=0; document.querySelectorAll('.like-button__border').length > i; i++) {  //Iterate over all like buttons
@@ -10,7 +12,7 @@ function changeVal() {
   /*Determines with what value to compare the current value of the like button*/
   for (var j=0; firstLikesVals.length > j; j++){
     if (likeElements[j] == this.querySelector('.like-button__box')) {
-      firstLikesVal = firstLikesVals[j];
+      var firstLikesVal = firstLikesVals[j];
     }
   }
   if (this.previousSibling.getAttribute('checked')) {

@@ -1,12 +1,12 @@
 mixin date-dropdown(options={})
-  div.date-dropdown__wrapper-with-name
+  .date-dropdown
     div
-     +text('H3-bold', options.first_name)
-     div.date-dropdown__wrapper
-        input(type='text' class='datepicker-here first-date-dropdown date-dropdown text-types_type_Body' placeholder='ДД.ММ.ГГГГ')
+     h3=options.first_name
+     .date-dropdown__wrapper
+        input(type='text' class='datepicker-here first-date-dropdown date-dropdown__input' placeholder='ДД.ММ.ГГГГ')
         span.material-icons.date-dropdown__button expand_more
     div
-      +text('H3-bold', options.second_name)
-      div.date-dropdown__wrapper
-        input(type='text' class='second-date-dropdown date-dropdown text-types_type_Body' placeholder='ДД.ММ.ГГГГ')
+      h3=options.second_name
+      .date-dropdown__wrapper
+        input(type='text' class='second-date-dropdown date-dropdown__input' placeholder='ДД.ММ.ГГГГ')
         span.material-icons.date-dropdown__button expand_more

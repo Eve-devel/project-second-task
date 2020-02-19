@@ -1,4 +1,4 @@
-import './checkbox.scss'
+import './checkbox.scss';
 
 (function($) {
 	function setChecked(target) {

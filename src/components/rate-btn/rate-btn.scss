@@ -1,10 +1,38 @@
-@import '__stars/rate-btn__stars';
-@import '__star/rate-btn__star';
-@import '__star-for-hover/rate-btn__star-for-hover';
+@import '../../style/variables.scss';
 
 .rate-btn {
   display: inline-flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-right: 20px;
+
+  &__stars {
+    width: 24px;
+  }
+
+  &__star {
+    background-image: $main-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+
+    &_for-hover {
+      position: relative;
+      left: -24px;
+      width: 24px;
+      z-index: -1;
+      opacity: 0;
+      background-image: $main-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+
+    &:hover+.rate-btn__star_for-hover{
+      opacity: 1;
+    }
+    &:hover~.rate-btn__stars .rate-btn__star_for-hover{
+      opacity: 1;
+    }
+  }
 }

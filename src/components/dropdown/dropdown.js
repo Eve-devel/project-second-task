@@ -1,4 +1,4 @@
-import './dropdown.scss'
+import './dropdown.scss';
 
 $(document).ready(function() {
   $('.guests').iqDropdown({

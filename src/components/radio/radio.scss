@@ -1,6 +1,56 @@
-@import '__name/radio__name';
-@import '__label/radio__label';
-@import '__input/radio__input';
-@import '__box/radio__box';
-@import '__check/radio__check';
-@import '__text/radio__text';
+@import '../../style/variables';
+
+.radio {
+
+  &__label {
+    display: inline-flex;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+
+    &:checked+.radio__box {
+      border-color: $purple;
+    }
+
+    &:checked+.radio__box .radio__check {
+      visibility: visible;
+    }
+
+    &:checked~.radio__text {
+      color: $dark-shade-75;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__check {
+    height: 12px;
+    width: 12px;
+    background-image: $main-gradient;
+    border-radius: 10px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    visibility: hidden;
+  }
+
+  &__text {
+    color: $dark-shade-50;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 30px;
+    line-height: 20px;
+  }
+}
