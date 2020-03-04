@@ -17,6 +17,9 @@ import './checkbox.scss';
 		this.each(function(){
 			setChecked(this);
 		});
+		this.find('input[type="checkbox"]').click(function(){
+			setChecked($(this).parents('.checkselect'));
+		});
 
 		this.parent().find('.checkbox__control').on('click', function(){
 			if ($('.checkbox__popup').is(':hidden')) {

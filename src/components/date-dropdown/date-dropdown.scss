@@ -2,7 +2,8 @@
 @import './plugin/datepicker';
 
 .date-dropdown {
-  width: 320px;
+  min-width: 320px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
@@ -31,6 +32,10 @@
 
     &::placeholder {
       color: $dark-shade-75;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 

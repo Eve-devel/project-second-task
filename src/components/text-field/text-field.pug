@@ -1,9 +1,19 @@
+//-
+  options.button - наличие кнопки
+  options.name - название поля
+  options.state - состояние поля (для ui kit)
+  options.type - тип поля
+  options.id - идентификатор поля
+  options.placeholder - подсказка для заполнения поля
+  options.content - содержимое поля
+  options.class - дополнительные классы (birthday для поля с маской дня рождения)
+
 mixin text-field(options = {})
-  .text-field
-    .text-field__name
-      h3=options.name
-      h3.text-field__state=options.state
-    if options.button
+  if options.button
+    .text-field_with-button
+      .text-field__name
+        h3=options.name
+        h3.text-field__state=options.state
       .text-field__wrapper
         input(type=options.type
               id=options.id
@@ -15,7 +25,11 @@ mixin text-field(options = {})
               value='arrow_forward'
               class='material-icons text-field__button'
               )
-    else
+  else
+    .text-field
+      .text-field__name
+        h3=options.name
+        h3.text-field__state=options.state
       input(type=options.type
             id=options.id
             placeholder=options.placeholder

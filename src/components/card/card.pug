@@ -1,0 +1,36 @@
+include ../date-dropdown/date-dropdown.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+include ../layout/layout.pug
+include ../text-field/text-field.pug
+include ../radio/radio.pug
+include ../toggle/toggle.pug
+
+mixin card-search()
+  .card
+    +layout({row_gap:'20'})
+      h1='Найдём номера под ваши пожелания'
+      +date-dropdown({first_name:'прибытие', second_name:'выезд'})
+      +layout({row_gap:'30'})
+        +dropdown({name:'гости', button: true, about: 'guests', items: ['Взрослые', 'Дети', 'Младенцы'],  defaultcounts: []})
+        +button({type:'button', text:'подобрать номер'})
+
+mixin card-registration()
+  .card
+    +layout({row_gap:'30'})
+      +layout({row_gap:'20'})
+        h1='Регистрация аккаунта'
+        +layout({row_gap:'10'})
+          +text-field({type: 'text', placeholder: 'Имя'})
+          +text-field({type: 'text', placeholder: 'Фамилия'})
+          +radio({texts: ['Мужчина', 'Женщина']})
+        +text-field({type:'text',name:'дата рождения',class: 'birthday',placeholder: 'ДД.ММ.ГГГГ'})
+        +layout({row_gap:'10'})
+          +text-field({type:'email',name:'данные для входа в сервис',placeholder: 'Email'})
+          +text-field({type:'password',placeholder: 'Пароль'})
+          +toggle({text: 'Получать спецпредложения'})
+        +button({type:'button', text:'перейти к оплате'})
+      .card__footer
+        p='Уже есть аккаунт на Toxin'
+        .card__button
+          +button({text: 'войти'})

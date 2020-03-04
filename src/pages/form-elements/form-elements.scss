@@ -1,0 +1,45 @@
+.p-form-elements {
+  max-width: 1158px;
+  margin: 143px auto 147px;
+  grid-template-columns: repeat(3, 320px);
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 320px);
+    max-width: 750px;
+  }
+  @media (max-width: 990px) {
+    grid-template-columns: repeat(2, 320px);
+    max-width: 690px;
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 320px);
+    max-width: 500px;
+    justify-content: center;
+  }
+
+  &__central-column {
+    padding-left: 27px;
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+    }
+  }
+
+  &__h3 {
+    padding-bottom: 16px;
+  }
+
+  &__comment {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    @media (max-width: 1200px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @media (max-width: 767px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+}

@@ -18,7 +18,7 @@
             firstDay: '',
             weekends: [6, 0],
             dateFormat: '',
-            altField: '.filter-date-dropdown',
+            altField: '.filter-date-dropdown__input',
             altFieldDateFormat: 'd M',
             toggleSelected: false,
             keyboardNav: true,
@@ -791,7 +791,7 @@
                     top = dims.top + dims.height - selfDims.height;
                     break;
                 case 'left':
-                    left = dims.left - dims.height/4.2;
+                    left = dims.left - 1;
                     break;
                 case 'center':
                     if (/left|right/.test(main)) {
@@ -2242,8 +2242,10 @@
  })(window, jQuery);
 // Calender show if click second date-dropdown or filter date-dropdown and buttons
 document.querySelector('.second-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-document.querySelector('.filter-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
 var AllButton = document.querySelectorAll('.date-dropdown__button');
 AllButton[0].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
 AllButton[1].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-document.querySelector('.filter-date-dropdown__button').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+if (document.querySelector('.filter-date-dropdown')) {
+  document.querySelector('.filter-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+  document.querySelector('.filter-date-dropdown__button').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
+};

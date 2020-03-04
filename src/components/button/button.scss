@@ -11,6 +11,11 @@
   cursor: pointer;
   border: none;
   height: 100%;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
 
   &__gradient-wrapper {
     background-image: $main-gradient;
@@ -19,6 +24,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
+
+    &_with-button {
+      min-width: 320px;
+    }
 
     &:hover:not(.button__gradient-wrapper_with-button) {
       background-image: $opacity-gradient;
@@ -35,6 +45,10 @@
     position: absolute;
     right: 0;
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &_type {

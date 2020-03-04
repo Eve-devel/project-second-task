@@ -2,9 +2,9 @@ import './date-dropdown.scss';
 import './plugin/datepicker.js';
 import IMask from 'imask';
 
-$('.date-dropdown__input').datepicker({
+$('.first-date-dropdown').datepicker({
 
-        altField: '.filter-date-dropdown',
+        altField: '.filter-date-dropdown__input',
         altFieldDateFormat: 'd M',
         toggleSelected: false,
         prevHtml: '<span class="material-icons">arrow_back</span>',
@@ -22,16 +22,6 @@ $('.date-dropdown__input').datepicker({
                   },
         language: {today: 'Применить'},
 });
-
-
-
-
-document.querySelector('.second-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-document.querySelector('.filter-date-dropdown').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-var AllButton = document.querySelectorAll('.date-dropdown__button');
-AllButton[0].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-AllButton[1].addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
-document.querySelector('.filter-date-dropdown__button').addEventListener('click', () => {$('.first-date-dropdown').datepicker().data('datepicker').show();});
 
 
 var element1 = document.querySelector('.first-date-dropdown');

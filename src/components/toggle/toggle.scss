@@ -1,6 +1,7 @@
 @import '../../style/variables.scss';
 
 .toggle {
+  display: block;
 
   &__input {
     position: absolute;
@@ -42,6 +43,5 @@
   &__text {
     margin-left: 50px;
     line-height: 20px;
-    margin-bottom: 14px;
   }
 }

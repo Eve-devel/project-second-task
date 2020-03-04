@@ -1,0 +1,30 @@
+@import '../../style/variables';
+
+.layout {
+  display: grid;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @for $i from 1 to 4 {
+      $columns: $i;
+
+      &_columns-#{$columns} {
+        grid-template-columns: repeat(auto-fit, 320px);
+      }
+  }
+
+  @for $i from 1 to 101 {
+      $margin_b: $i;
+
+      &_margin_b-#{$margin_b} {
+        margin-bottom: #{$margin_b}px;
+      }
+  }
+  @for $i from 1 to 101 {
+      $row_gap: $i;
+
+      &_row_gap-#{$row_gap} {
+        grid-row-gap: #{$row_gap}px;
+      }
+  }
+}

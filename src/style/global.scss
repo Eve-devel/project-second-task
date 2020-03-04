@@ -20,10 +20,12 @@ h2 {
 
 h1 {
   font-size: 1.714rem;
+  line-height: 2.143rem;
 }
 
 h2 {
   font-size: 1.357rem;
+  line-height: 1.714rem;
 }
 
 h3, body {
@@ -35,9 +37,10 @@ h3 {
   font-size: 0.857rem;
   text-transform: uppercase;
   color: $dark-shade-100;
+  line-height: 1.071rem;
 }
 
 body {
   color: $dark-shade-75;
-  line-height: 24px;
+  line-height: 1.714rem;
 }

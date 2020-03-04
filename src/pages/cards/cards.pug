@@ -1,0 +1,15 @@
+extends ../layouts/ui-kit
+
+block title
+  | Cards
+
+block content
+  include ../../components/card/card.pug
+
+  +card-search()
+  +card-registration()
+
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='./cards.js')
+  script(src='../../components/card/card.js')

@@ -1,4 +1,5 @@
 import './dropdown.scss';
+import './plugin/item-quantity-dropdown.min.js';
 
 $(document).ready(function() {
   $('.guests').iqDropdown({

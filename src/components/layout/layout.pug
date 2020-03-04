@@ -1,0 +1,14 @@
+mixin layout(options={})
+  -
+    var classes = ''
+    classes += options.width ? ' layout_width-' + options.width : ''
+    classes += options.margin_b ? ' layout_margin_b-' + options.margin_b : ''
+    classes += options.row_gap ? ' layout_row_gap-' + options.row_gap : ''
+    classes += options.columns ? ' layout_columns-' + options.columns : ''
+    classes += options.wrap ? ' layout_' + options.wrap : ''
+    classes += options.direction ? ' layout_' + options.direction : ''
+    classes += options.align ? ' layout_' + options.align : ''
+    classes += options.mix ? ' ' + options.mix : ''
+
+  .layout(class= classes)
+    block
