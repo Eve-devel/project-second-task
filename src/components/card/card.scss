@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .card {
   width: 380px;
   background: #FFFFFF;
@@ -6,7 +8,7 @@
   border-radius: 4px;
   padding: 40px 30px 30px;
 
-  &__footer {
+  &__line {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,5 +16,77 @@
 
   &__button {
     width: 99px;
+  }
+
+  &__text-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+     &_type {
+
+       &_main {
+        width: 320px;
+      }
+
+      &_list {
+      align-items: flex-start;
+     }
+    }
+  }
+
+  &__text-room-number {
+    font-size: 14px;
+    line-height: 17px;
+    white-space: pre;
+  }
+
+  &__text-room-type {
+    color: $purple;
+    white-space: pre;
+  }
+
+  &__text-room-price {
+    line-height: 18px;
+    color: $dark-shade-50;
+    white-space: pre;
+
+    &_bold {
+      font-weight: bold;
+    }
+
+    &_small {
+      font-size: 12px;
+    }
+  }
+
+  &__text-finally-price {
+    white-space: pre;
+  }
+
+  &__inf {
+    width: 214px;
+    display: inline-block;
+  }
+
+  &__inf-marker {
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  &__inf-marker-text {
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    color: $dark-shade-25;
+  }
+
+  &__inf-marker-circle {
+  }
+
+  &__datted {
+    width: 100%;
+    border-bottom: 1px dashed $dark-shade-25;
+    margin: 0 5px;
   }
 }

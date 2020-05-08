@@ -2,6 +2,7 @@ import './date-dropdown.scss';
 import './plugin/datepicker.js';
 import IMask from 'imask';
 
+
 $('.first-date-dropdown').datepicker({
 
         altField: '.filter-date-dropdown__input',
@@ -9,6 +10,7 @@ $('.first-date-dropdown').datepicker({
         toggleSelected: false,
         prevHtml: '<span class="material-icons">arrow_back</span>',
         nextHtml: '<span class="material-icons">arrow_forward</span>',
+        multipleDates: true,
         multipleDatesSeparator: ' - ',
         range: true,
         clearButton: true,
@@ -47,5 +49,6 @@ var maskOptions = {
     }
   }
 };
+
 var mask1 = IMask(element1, maskOptions);
 var mask2 = IMask(element2, maskOptions);
