@@ -5,6 +5,7 @@ include ../layout/layout.pug
 include ../text-field/text-field.pug
 include ../radio/radio.pug
 include ../toggle/toggle.pug
+include ../rate-btn/rate-btn.pug
 
 mixin card-search()
   .card
@@ -30,7 +31,7 @@ mixin card-registration()
           +text-field({type:'password',placeholder: 'Пароль'})
           +toggle({text: 'Получать спецпредложения'})
         +button({type:'button', text:'перейти к оплате'})
-      .card__line
+      .card__stroke
         p='Уже есть аккаунт на Toxin'
         .card__button
           +button({text: 'войти'})
@@ -85,7 +86,43 @@ mixin card-enter()
           +text-field({type:'email',placeholder: 'Email'})
           +text-field({type:'password',placeholder: 'Пароль'})
         +button({type:'button', text:'войти'})
-      .card__line
+      .card__stroke
         p='Нет аккаунта на Toxin?'
         .card__button
           +button({text: 'создать'})
+
+mixin card-room(options={})
+  .card.card__room
+    +layout({row_gap:'20'})
+      img.card__room-photo(src=options.photo)
+      .card__ellipses
+        svg.card__ellips.card__ellips_type-full
+          ellipse(cx='50%' cy='50%' rx='3.75' ry='3.74693' fill='#FFFFFF')
+        svg.card__ellips.card__ellips_type-border
+          ellipse(cx='50%' cy='50%' rx='3.75' ry='3.74693' fill='none')
+        svg.card__ellips.card__ellips_type-border
+          ellipse(cx='50%' cy='50%' rx='3.75' ry='3.74693' fill='none')
+        svg.card__ellips.card__ellips_type-border
+          ellipse(cx='50%' cy='50%' rx='3.75' ry='3.74693' fill='none')
+      if options.arrows
+        .card__rectangle.card__rectangle_type_left
+          input(type='submit' value='expand_more' class='material-icons card__arrow card__arrow_type_left')
+        .card__rectangle.card__rectangle_type_right
+          input(type='submit' value='expand_more' class='material-icons card__arrow card__arrow_type_right')
+      +layout({row_gap:'10'})
+        .card__text-line
+          .card__text-line
+            h2.card__text-room-number='№ '
+            h1=options.number
+            h3.card__text-room-type=options.type
+          .card__text-line
+            p.card__text-room-price.card__text-room-price_bold=options.price
+            p.card__text-room-price.card__text-room-price_small=' в сутки'
+        .card__line
+        .card__stroke
+          +rate-btn({
+            val: options.stars
+          })
+          .card__text-line
+            p.card__text-room-price.card__text-room-price_bold=options.review
+            p.card__text-room-price.card__text-room-price_small=' Отзывов'

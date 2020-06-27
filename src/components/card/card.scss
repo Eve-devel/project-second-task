@@ -8,7 +8,7 @@
   border-radius: 4px;
   padding: 40px 30px 30px;
 
-  &__line {
+  &__stroke {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,5 +88,83 @@
     width: 100%;
     border-bottom: 1px dashed $dark-shade-25;
     margin: 0 5px;
+  }
+
+  &__line {
+    width: 230px;
+    border-bottom: 1px solid $dark-shade-10;
+  }
+
+  &__room {
+    width: 270px;
+    padding: 0 20px 20px;
+    position: relative;
+  }
+
+  &__room-photo {
+    margin: 0 0 0 -22px;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  &__ellipses {
+    position: absolute;
+    top: 120.91px;
+    right: 15px;
+  }
+
+  &__ellips {
+    width: 7.5px;
+    height: 7.49px;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    margin-left: 3.75px;
+
+      &_type-border {
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+      }
+  }
+
+  &__rectangle {
+    position: absolute;
+    height: 151px;
+    width: 42px;
+    line-height: 151px;
+    text-align: center;
+
+    &_type {
+
+      &_left {
+        background-image:  linear-gradient(90deg, rgba(0, 0, 0, 49.53%), rgba(0, 0, 0, 1.02%));
+        margin: 0 0 0 -22px;
+        border-radius: 4px 0px 0px 0px;
+      }
+
+      &_right {
+        background-image:  linear-gradient(90deg, rgba(0, 0, 0, 1.02%), rgba(0, 0, 0, 49.53%));
+        right: 0%;
+        border-radius: 0px 4px 0px 0px;
+      }
+    }
+  }
+
+  &__arrow {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    vertical-align: middle;
+
+    &_type {
+
+      &_left {
+        transform: rotate(90deg);
+      }
+
+      &_right {
+        transform: rotate(-90deg);
+      }
+    }
   }
 }
