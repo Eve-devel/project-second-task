@@ -1,11 +1,52 @@
+@import '../../style/variables.scss';
+
 .header {
-position: absolute;
-width: 1440px;
-height: 70px;
-left: 0px;
-top: 0px;
-display: flex;
-align-items: center;
-background: #FFF;
-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 0 140px;
+
+  &__right-block {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 20px;
+  }
+
+  &__central-elemint {
+    padding: 0 20px;
+  }
+
+  &__nav {
+    color: $dark-shade-50;
+    width: 447px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 17px;
+    vertical-align: middle;
+  }
+
+  &__rectangle {
+    width: 1px;
+    height: 30px;
+    background: $dark-shade-10;
+  }
+
+  &__color-button {
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+
+  &__uncolor-button {
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+
+  &__username {
+    color: $dark-shade-50;
+    line-height: 30px;
+  }
 }

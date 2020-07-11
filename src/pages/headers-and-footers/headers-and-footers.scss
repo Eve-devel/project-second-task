@@ -1,0 +1,6 @@
+@import '../../style/variables.scss';
+
+.header__nav p:first-child {
+  font-weight: bold;
+  color: $dark-shade-75;
+}

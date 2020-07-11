@@ -1,0 +1,14 @@
+extends ../layouts/ui-kit
+
+block title
+  | Headers & Footers
+
+block content
+  include ../../components/header/header.pug
+
+  +header({type:'not-entered'})
+  +header({type:'entered', username:'Юлий Цезарь'})
+
+block scripts
+  script(src='./headers-and-footers.js')
+  script(src='../../components/header/header.js')

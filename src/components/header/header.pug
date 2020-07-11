@@ -1,14 +1,29 @@
-header.header
-  +logo('color')
-  nav.nav.header__nav
-    each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-     if val == 'Услуги' || val == 'Соглашения'
-       p= val
-            span.material-icons expand_more
-     else
-       p= val
+include ../button/button.pug
 
-
-  div.button_wrapper-gradient-border.header__button-entrance
-    input(class="button button_colorless" type="submit" value="ВОЙТИ")
-  input(class="button button_color header__button-registration" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ")
+mixin header(options={})
+  if options.type == 'not-entered'
+    .header
+      +logo('color')
+      .header__right-block
+        nav.header__nav
+          each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+           if val == 'Услуги' || val == 'Соглашения'
+             p= val
+                  span.material-icons expand_more
+           else
+             p= val
+        +button({text:'Войти', class:'header__uncolor-button'})
+        +button({type: 'color', text:'ЗАРЕГИСТРИРОВАТЬСЯ', class:'header__color-button'})
+  if options.type == 'entered'
+    .header
+      +logo('color')
+      .header__right-block
+        nav.header__nav
+          each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+           if val == 'Услуги' || val == 'Соглашения'
+             p= val
+                  span.material-icons expand_more
+           else
+             p= val
+        .header__rectangle
+        span.header__username=options.username
