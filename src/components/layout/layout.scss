@@ -5,6 +5,7 @@
   align-items: flex-start;
   justify-content: space-between;
   grid-template-columns: 1fr,100%;
+  grid-template-rows: max-content;
 
   @for $i from 1 to 4 {
       $columns: $i;

@@ -5,10 +5,16 @@ block title
 
 block content
   include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
 
-  +header({type:'not-entered'})
-  +header({type:'entered', username:'Юлий Цезарь'})
+  .headers-and-footers
+    +layout({row_gap:40})
+      +header({type:'not-entered'})
+      +header({type:'entered', username:'Юлий Цезарь'})
+      +footer()
+      +footer({type: 'creative'})
 
 block scripts
   script(src='./headers-and-footers.js')
   script(src='../../components/header/header.js')
+  script(src='../../components/footer/footer.js')

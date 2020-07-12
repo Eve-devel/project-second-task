@@ -1,0 +1,41 @@
+include ../layout/layout.pug
+include ../text-field/text-field.pug
+
+mixin footer(options={})
+  if options.type == 'creative'
+    .footer__creative
+      +logo('color')
+      p.footer__copyright_for-creative='Copyright © 2018 Toxin отель. Все права зачищены.'
+      .footer__icons
+        p.footer__icon=''
+        p.footer__icon=''
+        p.footer__icon=''
+  else
+    .footer
+      .footer__top-block
+        +layout({row_gap:'20'})
+          +logo('color')
+          p='Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'
+        -
+          var array = [
+                       {title: 'Навигация', list: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
+                       {title: 'О нас', list: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
+                       {title: 'Служба поддержки', list: ['Соглашения', 'Сообщества', 'Связь с нами']}
+                       ]
+        each val in array
+          +layout({row_gap:'21'})
+            h3.footer__title=val.title
+            +layout({row_gap:'20'})
+              each item in val.list
+                p.footer__list=item
+        +layout({row_gap:'20'})
+          h3.footer__title='Подписка'
+          +layout({row_gap:'19'})
+            p='Получайте специальные предложения и новости сервиса'
+            +text-field({button:true, placeholder:'Email'})
+      .footer__bottom-block
+        p.footer__copyright='Copyright © 2018 Toxin отель. Все права зачищены.'
+        .footer__icons
+          p.footer__icon=''
+          p.footer__icon=''
+          p.footer__icon=''
