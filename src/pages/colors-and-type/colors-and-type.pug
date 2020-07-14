@@ -1,44 +1,45 @@
 extends ../layouts/ui-kit
+include ../../components/layout/layout.pug
 
 block title
   | Colors & type
 
 block content
-  div.wrapper_type_horizontal
-    include ../../components/colors/colors.pug
+  .colors-and-type
+    -
+      var arr = [
+                  {color: 'dark-shade-100', name: 'Dark Shade 100%', hex: '#1F2041'},
+                  {color: 'dark-shade-75',name: 'Dark Shade 75%', hex: '#1F2041'},
+                  {color: 'dark-shade-50',name: 'Dark Shade 50%', hex: '#1F2041'},
+                  {color: 'dark-shade-25',name: 'Dark Shade 25%', hex: '#1F2041'},
+                  {color: 'dark-shade-5',name: 'Dark Shade 5%', hex: '#1F2041'},
+                  {color: 'purple',name: 'Purple', hex: '#BC9CFF'},
+                  {color: 'green',name: 'Green', hex: '#6FCF97'}
+                ]
+    .colors-and-type__colors
+      +layout({row_gap:20})
+        each val in arr
+          .colors-and-type__color
+            .colors-and-type__rectangle(class='colors-and-type__rectangle_color_'+val.color)
+            .colors-and-type__caption
+              h2.colors-and-type__color-name=val.name
+              h2.colors-and-type__hex=val.hex
 
-    div.text-types__wrapper
-      -
-       var types = [
-        {
-          type_name: 'H1',
-          type_font: 'text-types__name_size_24',
-          text_content: 'This one is the sub-section or widget title',
-          text_font: 'H1'
-        },
-        {
-          type_name: 'H2',
-          type_font: 'text-types__name_size_19',
-          text_content: 'Next one is the item title inside widgets',
-          text_font: 'H2-bold'
-        },
-        {
-          type_name: 'H3',
-          type_font: 'text-types__name_size_12',
-          text_content: 'This is a label or CTA text',
-          text_font: 'H3-bold'
-        },
-        {
-          type_name: 'Body',
-          type_font: 'text-types__name_size_14',
-          text_content: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
-          text_font: 'Body'
-        }
-       ]
-      each val in types
-        .text-types
-          div(class= val.type_font).text-types__name= val.type_name
-          if val.type_name == 'Body'
-            +text(val.text_font, val.text_content, 'text-types_type_Body_width')
-          else
-            +text(val.text_font, val.text_content)
+    +layout({row_gap:50})
+      .colors-and-type__text-type
+        p.colors-and-type__text-name.colors-and-type__text-name_type_h1='H1'
+        h1='This one is the sub-section or widget title'
+      .colors-and-type__text-type
+        p.colors-and-type__text-name.colors-and-type__text-name_type_h2='H2'
+        h2='Next one is the item title inside widgets'
+      .colors-and-type__text-type
+        p.colors-and-type__text-name.colors-and-type__text-name_type_h3='H3'
+        h3='This is a label or CTA text'
+      .colors-and-type__text-type
+        p.colors-and-type__text-name='Body'
+        p.colors-and-type__pre-body-text
+          |This is the body text which is used for most
+          |of the design, like paragraphs, lists, etc.
+
+block scripts
+  script(src='./colors-and-type.js')

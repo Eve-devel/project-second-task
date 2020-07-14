@@ -1,0 +1,95 @@
+@import '../../style/variables.scss';
+
+.colors-and-type {
+  display: flex;
+  padding: 145px 191px 0 150px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1440px;
+
+  &__color {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rectangle {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+
+    &_color {
+
+      &_dark-shade-100 {
+        background: $dark-shade-100;
+      }
+
+      &_dark-shade-75 {
+        background: $dark-shade-75;
+      }
+
+      &_dark-shade-50 {
+        background: $dark-shade-50;
+      }
+
+      &_dark-shade-25 {
+        background: $dark-shade-25;
+      }
+
+      &_dark-shade-5 {
+        background: $dark-shade-5;
+      }
+
+      &_purple {
+        background: $purple;
+      }
+
+      &_green {
+        background: $green;
+      }
+    }
+  }
+
+  &__color-name {
+    line-height: 29px;
+  }
+
+  &__hex {
+    font-weight: 400;
+    line-height: 29px;
+  }
+
+  &__text-type {
+    display: flex;
+    max-width: 403px;
+  }
+
+  &__text-name {
+    color: $dark-shade-25;
+    margin-right: 30px;
+    text-align: right;
+    min-width: 37px;
+
+    &_type {
+
+      &_h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      &_h2 {
+        font-size: 19px;
+        line-height: 23px;
+      }
+
+      &_h3 {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  &__pre-body-text {
+    white-space: pre;
+  }
+}
