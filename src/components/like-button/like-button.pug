@@ -1,6 +1,6 @@
 mixin like-button(options={})
-  label.like-button
+  .like-button
     input(type='checkbox' class='like-button__input' checked=options.checked)
-    span.like-button__border
+    span.like-button__border(class=options.class)
       span.like-button__box
         span.like-button__val=options.val

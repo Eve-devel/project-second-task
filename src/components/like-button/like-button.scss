@@ -1,6 +1,8 @@
 @import '../../style/variables.scss';
 
 .like-button {
+  display: inline-block;
+  height: 20px;
 
   &__input {
     position: absolute;

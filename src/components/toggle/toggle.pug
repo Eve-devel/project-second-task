@@ -6,4 +6,4 @@ mixin toggle(options={})
     input(type='checkbox' class='toggle__input')
     span.toggle__box
       span.toggle__check
-    +text('Body', options.text, 'toggle__text')
+    p.toggle__text=options.text

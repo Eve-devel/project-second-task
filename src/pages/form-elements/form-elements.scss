@@ -1,20 +1,33 @@
-.p-form-elements {
+@import '../../style/variables.scss';
+
+.form-elements {
+
+  background: #FFF;
+  padding: 143px 0 147px;
+  width: 1440px;
+
+  &__elements {
   max-width: 1158px;
-  margin: 143px auto 147px;
+  margin: 0 auto 0;
   grid-template-columns: repeat(3, 320px);
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 320px);
-    max-width: 750px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 320px);
+      max-width: 750px;
+    }
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(2, 320px);
+      max-width: 690px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 320px);
+      max-width: 500px;
+      justify-content: center;
+    }
   }
-  @media (max-width: 990px) {
-    grid-template-columns: repeat(2, 320px);
-    max-width: 690px;
-  }
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(1, 320px);
-    max-width: 500px;
-    justify-content: center;
+
+  &__left-narrow-column {
+    max-width: 266px;
   }
 
   &__central-column {
@@ -27,6 +40,43 @@
 
   &__h3 {
     padding-bottom: 16px;
+  }
+
+  &__like-button-block {
+    height: 51px;
+  }
+
+  &__like-button {
+    margin-right: 10px;
+  }
+
+  &__buttons-block {
+    width: 218px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+
+    &_color {
+
+      &_purple {
+        color: $purple;
+        margin-right: 20px;
+      }
+
+      &_grey {
+        color: $dark-shade-50;
+      }
+
+      &_opacity {
+        background-image: $opacity-gradient;
+      }
+    }
   }
 
   &__comment {
