@@ -1,7 +1,8 @@
 @import '../../style/variables.scss';
 
 .toggle {
-  display: block;
+
+  height: 24px;
 
   &__input {
     position: absolute;
@@ -28,6 +29,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
+    vertical-align: middle;
   }
 
   &__check {
@@ -42,5 +44,6 @@
 
   &__text {
     margin-left: 50px;
+    line-height: 18px;
   }
 }

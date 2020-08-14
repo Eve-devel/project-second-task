@@ -25,11 +25,19 @@ mixin text-field(options = {})
               value='arrow_forward'
               class='material-icons text-field__button'
               )
-  else
+  else if options.name
     .text-field
       .text-field__name
         h3=options.name
         h3.text-field__state=options.state
+      input(type=options.type
+            id=options.id
+            placeholder=options.placeholder
+            value=options.content
+            class='text-field__field'+' '+options.class
+            )
+  else
+    .text-field
       input(type=options.type
             id=options.id
             placeholder=options.placeholder

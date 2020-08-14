@@ -12,7 +12,7 @@ mixin card-search()
     +layout({row_gap:'20'})
       h1='Найдём номера под ваши пожелания'
       +date-dropdown({first_name:'прибытие', second_name:'выезд'})
-      +layout({row_gap:'30'})
+      +layout({row_gap:'31'})
         +dropdown({name:'гости', button: true, about: 'guests', items: ['Взрослые', 'Дети', 'Младенцы'],  defaultcounts: []})
         +button({type:'button', text:'подобрать номер'})
 
@@ -46,30 +46,31 @@ mixin card-room-details()
             h1='888'
             h3.card__text-room-type=' люкс'
           .card__text-line
-            p.card__text-room-price.card__text-room-price_bold='9 990₽'
+            p.card__text-room-price.card__text-room-price_bold='9 990 ₽'
             p.card__text-room-price.card__text-room-price_small=' в сутки'
         +date-dropdown({first_name:'прибытие', second_name:'выезд'})
-        +dropdown({name:'гости', button: true, about: 'guests', items: ['Взрослые', 'Дети', 'Младенцы'],  defaultcounts: ['3']})
-        +layout({row_gap:'10'})
-          .card__text-line.card__text-line_type_main.card__text-line_type_list
-            p='9 990₽ х 4 суток'
-            p='39 960₽'
-          .card__text-line.card__text-line_type_main.card__text-line_type_list
-            .card__text-line.card__text-line_type_list
-              p.card__inf='Сбор за услуги: скидка 2 179₽'
-              .card__inf-marker
-                p.card__inf-marker-text='i'
-                svg.card__inf-marker-circle(width='20' height='20' viewBox='0 0 20 20' fill='none')
-                  circle(cx='10' cy='10' r='9.5' stroke='#1F2041' stroke-opacity='0.25')
-            p='0₽'
-          .card__text-line.card__text-line_type_main.card__text-line_type_list
-            .card__text-line.card__text-line_type_list
-              p.card__inf='Сбор за дополнительные услуги'
-              .card__inf-marker
-                p.card__inf-marker-text='i'
-                svg.card__inf-marker-circle(width='20' height='20' viewBox='0 0 20 20' fill='none')
-                  circle(cx='10' cy='10' r='9.5' stroke='#1F2041' stroke-opacity='0.25')
-            p='300₽'
+        +layout({row_gap:'19'})
+          +dropdown({name:'гости', button: true, about: 'guests', items: ['Взрослые', 'Дети', 'Младенцы'],  defaultcounts: ['3']})
+          +layout({row_gap:'10'})
+            .card__text-line.card__text-line_type_main.card__text-line_type_list
+              p='9 990 ₽ х 4 суток'
+              p='39 960₽'
+            .card__text-line.card__text-line_type_main.card__text-line_type_list
+              .card__text-line.card__text-line_type_list
+                p.card__inf='Сбор за услуги: скидка 2 179₽'
+                .card__inf-marker
+                  p.card__inf-marker-text='i'
+                  svg.card__inf-marker-circle(width='20' height='20' viewBox='0 0 20 20' fill='none')
+                    circle(cx='10' cy='10' r='9.5' stroke='#1F2041' stroke-opacity='0.25')
+              span='0₽'
+            .card__text-line.card__text-line_type_main.card__text-line_type_list
+              .card__text-line.card__text-line_type_list
+                p.card__inf='Сбор за дополнительные услуги'
+                .card__inf-marker
+                  p.card__inf-marker-text='i'
+                  svg.card__inf-marker-circle(width='20' height='20' viewBox='0 0 20 20' fill='none')
+                    circle(cx='10' cy='10' r='9.5' stroke='#1F2041' stroke-opacity='0.25')
+              span='300₽'
       +layout({row_gap:'20'})
         .card__text-line.card__text-line_type_main
           h2='Итого'
@@ -113,16 +114,17 @@ mixin card-room(options={})
         .card__text-line
           .card__text-line
             h2.card__text-room-number='№ '
-            h1=options.number
+            h2=options.number
             h3.card__text-room-type=options.type
           .card__text-line
             p.card__text-room-price.card__text-room-price_bold=options.price
             p.card__text-room-price.card__text-room-price_small=' в сутки'
-        .card__line
-        .card__stroke
-          +rate-btn({
-            val: options.stars
-          })
-          .card__text-line
-            p.card__text-room-price.card__text-room-price_bold=options.review
-            p.card__text-room-price.card__text-room-price_small=' Отзывов'
+        +layout({row_gap:'8'})
+          .card__line
+          .card__stroke
+            +rate-btn({
+              val: options.stars
+            })
+            .card__text-line
+              p.card__text-room-review.card__text-room-review_type_bold=options.review
+              p.card__text-room-review.card__text-room-review_type_small=' Отзывов'

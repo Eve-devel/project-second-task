@@ -1,0 +1,13 @@
+.cards {
+  background: #F4F4F6;
+  height: 1350px;
+  padding: 150px 140px 0 140px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .card {
+    margin: 0 40px 40px 0;
+  }
+}

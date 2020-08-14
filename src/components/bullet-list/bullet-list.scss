@@ -11,6 +11,10 @@
     margin-bottom: 10px;
     display: flex;
     align-items: baseline;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__marker {
