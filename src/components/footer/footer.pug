@@ -1,9 +1,10 @@
 include ../layout/layout.pug
 include ../text-field/text-field.pug
+include ../logo/logo.pug
 
 mixin footer(options={})
   if options.type == 'creative'
-    .footer__creative
+    footer.footer__creative
       +logo('color')
       p.footer__copyright_for-creative='Copyright © 2018 Toxin отель. Все права защищены.'
       .footer__icons
@@ -11,7 +12,7 @@ mixin footer(options={})
         p.footer__icon=''
         p.footer__icon=''
   else
-    .footer
+    footer.footer
       .footer__top-block
         +layout({row_gap:'20'})
           +logo('color')
@@ -30,7 +31,7 @@ mixin footer(options={})
                 p.footer__list=item
         +layout({row_gap:'20'})
           h3.footer__title='Подписка'
-          +layout({row_gap:'19'})
+          +layout({row_gap:'20'})
             p='Получайте специальные предложения и новости сервиса'
             +text-field({button:true, placeholder:'Email'})
       .footer__bottom-block

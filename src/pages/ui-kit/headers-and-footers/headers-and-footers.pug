@@ -1,11 +1,11 @@
-extends ../layouts/ui-kit
+extends ../../layouts/ui-kit
 
 block title
   | Headers & Footers
 
 block content
-  include ../../components/header/header.pug
-  include ../../components/footer/footer.pug
+  include ../../../components/header/header.pug
+  include ../../../components/footer/footer.pug
 
   .headers-and-footers
     +layout({row_gap:40})
@@ -16,5 +16,3 @@ block content
 
 block scripts
   script(src='./headers-and-footers.js')
-  script(src='../../components/header/header.js')
-  script(src='../../components/footer/footer.js')

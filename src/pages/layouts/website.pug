@@ -1,4 +1,5 @@
-include ../../components/logo/logo.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
 
 doctype html
 html(lang="ru")
@@ -13,9 +14,11 @@ html(lang="ru")
       block title
 
   body
-    +logo('grey')
 
+    +header({type:'not-entered'})
     block content
+    +footer()
 
     block scripts
-    script(src='../../components/logo/logo.js')
+    script(src='../../../components/header/header.js')
+    script(src='../../../components/footer/footer.js')

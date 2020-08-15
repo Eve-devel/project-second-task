@@ -1,0 +1,14 @@
+extends ../../layouts/website
+
+block title
+  | Landing page
+
+block content
+  include ../../../components/card/card.pug
+  main.landing
+    +card-search({class:'landing__card-search'})
+    p.landing__text='Лучшие номера для вашей работы, отдыха и просто вдохновения'
+
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='./landing.js')

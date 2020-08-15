@@ -1,2 +1,20 @@
-@import '_type/logo_type_color';
-@import '_type/logo_type_grey';
+.logo {
+
+  &_type {
+
+    &_color {
+      background-image: url(./img/logo-color.svg);
+      width: 105.69px;
+      height: 40px;
+    }
+
+    &_grey {
+      background-image: url(./img/logo-grey.svg);
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      left: 30px;
+      top: 30px;
+    }
+  }
+}

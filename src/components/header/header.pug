@@ -1,8 +1,9 @@
 include ../button/button.pug
+include ../logo/logo.pug
 
 mixin header(options={})
   if options.type == 'not-entered'
-    .header
+    header.header
       +logo('color')
       .header__right-block
         nav.header__nav
@@ -15,7 +16,7 @@ mixin header(options={})
         +button({text:'Войти', class:'header__uncolor-button'})
         +button({type: 'color', text:'ЗАРЕГИСТРИРОВАТЬСЯ', class:'header__color-button'})
   if options.type == 'entered'
-    .header
+    header.header
       +logo('color')
       .header__right-block
         nav.header__nav

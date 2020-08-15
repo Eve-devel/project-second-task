@@ -11,9 +11,10 @@
 mixin text-field(options = {})
   if options.button
     .text-field_with-button
-      .text-field__name
-        h3=options.name
-        h3.text-field__state=options.state
+      if options.name
+        .text-field__name
+          h3=options.name
+          h3.text-field__state=options.state
       .text-field__wrapper
         input(type=options.type
               id=options.id

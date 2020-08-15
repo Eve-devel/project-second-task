@@ -7,8 +7,8 @@ include ../radio/radio.pug
 include ../toggle/toggle.pug
 include ../rate-btn/rate-btn.pug
 
-mixin card-search()
-  .card
+mixin card-search(options={})
+  .card(class=options.class)
     +layout({row_gap:'20'})
       h1='Найдём номера под ваши пожелания'
       +date-dropdown({first_name:'прибытие', second_name:'выезд'})
@@ -16,8 +16,8 @@ mixin card-search()
         +dropdown({name:'гости', button: true, about: 'guests', items: ['Взрослые', 'Дети', 'Младенцы'],  defaultcounts: []})
         +button({type:'button', text:'подобрать номер'})
 
-mixin card-registration()
-  .card
+mixin card-registration(options={})
+  .card(class=options.class)
     +layout({row_gap:'30'})
       +layout({row_gap:'20'})
         h1='Регистрация аккаунта'
@@ -36,8 +36,8 @@ mixin card-registration()
         .card__button
           +button({text: 'войти'})
 
-mixin card-room-details()
-  .card
+mixin card-room-details(options={})
+  .card(class=options.class)
     +layout({row_gap:'30'})
       +layout({row_gap:'20'})
         .card__text-line.card__text-line_type_main
@@ -78,8 +78,8 @@ mixin card-room-details()
           h2.card__text-finally-price='38 081₽'
         +button({type:'button', text:'забронировать'})
 
-mixin card-enter()
-  .card
+mixin card-enter(options={})
+  .card(class=options.class)
     +layout({row_gap:'30'})
       +layout({row_gap:'20'})
         h1='Войти'
@@ -93,7 +93,7 @@ mixin card-enter()
           +button({text: 'создать'})
 
 mixin card-room(options={})
-  .card.card__room
+  .card.card__room(class=options.class)
     +layout({row_gap:'20'})
       img.card__room-photo(src=options.photo)
       .card__ellipses

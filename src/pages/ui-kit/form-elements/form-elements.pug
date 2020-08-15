@@ -1,20 +1,20 @@
-extends ../layouts/ui-kit
-include ../../components/layout/layout.pug
-include ../../components/text-field/text-field.pug
-include ../../components/dropdown/dropdown.pug
-include ../../components/date-dropdown/date-dropdown.pug
-include ../../components/filter-date-dropdown/filter-date-dropdown.pug
-include ../../components/checkbox/checkbox.pug
-include ../../components/radio/radio.pug
-include ../../components/toggle/toggle.pug
-include ../../components/like-button/like-button.pug
-include ../../components/rate-btn/rate-btn.pug
-include ../../components/range-slider/range-slider.pug
-include ../../components/button/button.pug
-include ../../components/pagination/pagination.pug
-include ../../components/bullet-list/bullet-list.pug
-include ../../components/icon-text-list/icon-text-list.pug
-include ../../components/comment/comment.pug
+extends ../../layouts/ui-kit
+include ../../../components/layout/layout.pug
+include ../../../components/text-field/text-field.pug
+include ../../../components/dropdown/dropdown.pug
+include ../../../components/date-dropdown/date-dropdown.pug
+include ../../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../../components/checkbox/checkbox.pug
+include ../../../components/radio/radio.pug
+include ../../../components/toggle/toggle.pug
+include ../../../components/like-button/like-button.pug
+include ../../../components/rate-btn/rate-btn.pug
+include ../../../components/range-slider/range-slider.pug
+include ../../../components/button/button.pug
+include ../../../components/pagination/pagination.pug
+include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/icon-text-list/icon-text-list.pug
+include ../../../components/comment/comment.pug
 
 block title
   | Form Elements
@@ -235,7 +235,7 @@ block content
         })
       +layout({mix: 'form-elements__central-column form-elements__comment'})
         +comment({
-          comments: [{photo: '../../img/photo.png',
+          comments: [{photo: './img/photo.png',
                       name: 'Мурад Сарафанов',
                       time: '5 дней назад',
                       like: {val: '12', checked: 'checked'},
@@ -246,21 +246,4 @@ block content
 
 block scripts
   script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
-  script(src='../../components/dropdown/plugin/item-quantity-dropdown.min.js')
-  script(src='../../components/dropdown/dropdown.js')
-  script(src='../../components/text-field/text-field.js')
-  script(src='../../components/date-dropdown/date-dropdown.js')
-  script(src='../../components/filter-date-dropdown/filter-date-dropdown.js')
-  script(src='../../components/checkbox/checkbox.js')
-  script(src='../../components/like-button/like-button.js')
-  script(src='../../components/rate-btn/rate-btn.js')
-  script(src='../../components/range-slider/range-slider.js')
-  script(src='../../components/button/button.js')
-  script(src='../../components/pagination/pagination.js')
-  script(src='../../components/bullet-list/bullet-list.js')
-  script(src='../../components/icon-text-list/icon-text-list.js')
-  script(src='../../components/comment/comment.js')
-  script(src='../../components/radio/radio.js')
-  script(src='../../components/toggle/toggle.js')
-  script(src='../../components/layout/layout.js')
   script(src='./form-elements.js')
