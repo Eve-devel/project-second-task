@@ -1,6 +1,13 @@
+//-
+  options.expandable - если true, то список выпадающий (bool);
+  options.name - заголовок списка;
+  options.texts - массив объектов с названиями пунктов, информацией об их положении 'вкл'/'выкл' и
+                  наличии уточняющих комментариев, например,
+                  {text: 'Питомцы', checked: 'checked', rich:'Возможно проживание с питомцами'};
+
 mixin checkbox(options={})
   .checkbox
-    if options.list
+    if options.expandable
       .checkbox__select(data-name=options.name)
         each item in options.texts
           label.checkbox__label

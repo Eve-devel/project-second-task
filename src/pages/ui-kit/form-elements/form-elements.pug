@@ -74,8 +74,7 @@ block content
                   {text:'Можно пригласить гостей\n(до 10 человек)',
                    checked: 'checked'}
                  ],
-          name: 'Checkbox Buttons',
-          checked: 'checked'
+          name: 'Checkbox Buttons'
         })
         +layout({row_gap: '37'})
           div
@@ -111,7 +110,7 @@ block content
             val: '5'
           })
       +layout({row_gap: '42'})
-        +range-slider()
+        +range-slider({name:'Range Slider'})
         +layout({row_gap: '40'})
           div
             h3.form-elements__h3='buttons'
@@ -180,7 +179,7 @@ block content
         })
       +layout({row_gap: '20'})
         +checkbox({
-          list: true,
+          expandable: true,
           texts: [{text:'Завтрак'},
                   {text:'Письменный стол', checked: 'checked'},
                   {text:'Стул для кормления', checked: 'checked'},
@@ -193,7 +192,7 @@ block content
           name: 'expandable checkbox list'
         })
         +checkbox({
-          list: true,
+          expandable: true,
           texts: [{text:'Завтрак'},
                   {text:'Письменный стол', checked: 'checked'},
                   {text:'Стул для кормления', checked: 'checked'},

@@ -10,7 +10,7 @@ import './checkbox.scss';
 		this.wrapInner('<div class="checkbox__popup"></div>');
 		this.prepend(
 			'<div class="checkbox__control">' +
-				'<h3></h3>' + '<span class="checkbox__button material-icons">expand_more</span>' +
+				'<h3></h3>' + '<p class="checkbox__button material-icons">expand_more</span>' +
 			'</div>'
 		);
 

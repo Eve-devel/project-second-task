@@ -1,0 +1,161 @@
+extends ../../layouts/website
+
+block title
+  | Search room
+
+block content
+  include ../../../components/filter-date-dropdown/filter-date-dropdown.pug
+  include ../../../components/dropdown/dropdown.pug
+  include ../../../components/range-slider/range-slider.pug
+  include ../../../components/checkbox/checkbox.pug
+  include ../../../components/card/card.pug
+  include ../../../components/pagination/pagination.pug
+  include ../../../components/layout/layout.pug
+  main.search-room
+    .search-room__filters
+      +layout({row_gap:'30'})
+        +layout({row_gap:'20'})
+          +filter-date-dropdown({name:'даты пребывания в отеле'})
+          +dropdown({name:'гости',
+                     about:'guests',
+                     defaultcounts: [2, 1, 1],
+                     items: ['взрослые', 'дети', 'младенцы'],
+                     button: true})
+        +range-slider({name:'диапазон цены',
+                       comment: 'Стоимость за сутки пребывания в номере'})
+        +layout({row_gap:'31'})
+          +checkbox({name:'checkbox buttons',
+                     texts:[{text:'Можно курить'},
+                            {text:'Можно с питомцами', checked: 'checked'},
+                            {text:'Можно пригласить гостей (до 10 человек)', checked: 'checked'}
+                            ]
+                    })
+          +checkbox({name: 'доступность',
+                     texts:[{text: 'Широкий коридор', rich: 'Ширина коридоров в номере не менее 91 см.'},
+                            {text: 'Помощник для инвалидов', rich: 'На 1 этаже вас встретит специалист и проводит до номера.'}
+                           ]
+                    })
+        +layout({row_gap:'16'})
+          +dropdown({name: 'удобства номера',
+                     about: 'rooms',
+                     defaultcounts: [2, 2, 0],
+                     items: ['спальни', 'кровати', 'ванные комнаты'],
+                     button: false})
+          +checkbox({expandable: true,
+                     name: 'дополнительные удобства',
+                     texts: [
+                             {text: 'Завтрак'},
+                             {text: 'Письменный стол', checked: 'checked'},
+                             {text: 'Стул для кормления', checked: 'checked'},
+                             {text: 'Кроватка', checked: 'checked'},
+                             {text: 'Телевизор'},
+                             {text: 'Шампунь'},
+                             {text: 'Телевизор'},
+                             {text: 'Шампунь'}
+                     ]})
+    div
+      h1.search-room__header='Номера, которые мы для вас подобрали'
+      +layout({row_gap:'19', mix: 'search-room__rooms'})
+        +card-room({photo: './img/room888.png',
+                    arrows: true,
+                    number: '888',
+                    price: '9 990₽',
+                    type: 'люкс',
+                    stars: 5,
+                    review: '145'
+                    })
+        +card-room({photo: './img/room840.png',
+                    arrows: false,
+                    number: '840',
+                    price: '9 990₽',
+                    type: '',
+                    stars: 4,
+                    review: '65'
+                    })
+        +card-room({photo: './img/room980.png',
+                    arrows: false,
+                    number: '980',
+                    price: '8 500₽',
+                    type: 'люкс',
+                    stars: 3,
+                    review: '35'
+                    })
+        +card-room({photo: './img/room856.png',
+                    arrows: false,
+                    number: '856',
+                    price: '7 300₽',
+                    type: '',
+                    stars: 5,
+                    review: '19'
+                    })
+        +card-room({photo: './img/room740.png',
+                    arrows: false,
+                    number: '740',
+                    price: '6 000₽',
+                    type: '',
+                    stars: 4,
+                    review: '44'
+                    })
+        +card-room({photo: './img/room982.png',
+                    arrows: false,
+                    number: '982',
+                    price: '5 800₽',
+                    type: '',
+                    stars: 3,
+                    review: '56'
+                    })
+        +card-room({photo: './img/room678.png',
+                    arrows: false,
+                    number: '678',
+                    price: '5 500₽',
+                    type: '',
+                    stars: 5,
+                    review: '45'
+                    })
+        +card-room({photo: './img/room450.png',
+                    arrows: false,
+                    number: '450',
+                    price: '5 300₽',
+                    type: '',
+                    stars: 4,
+                    review: '39'
+                    })
+        +card-room({photo: './img/room350.png',
+                    arrows: false,
+                    number: '350',
+                    price: '5 000₽',
+                    type: '',
+                    stars: 3,
+                    review: '77'
+                    })
+        +card-room({photo: './img/room666.png',
+                    arrows: false,
+                    number: '666',
+                    price: '5 000₽',
+                    type: '',
+                    stars: 5,
+                    review: '25'
+                    })
+        +card-room({photo: './img/room444.png',
+                    arrows: false,
+                    number: '444',
+                    price: '5 000₽',
+                    type: '',
+                    stars: 3,
+                    review: '15'
+                    })
+        +card-room({photo: './img/room352.png',
+                    arrows: false,
+                    number: '352',
+                    price: '5 000₽',
+                    type: '',
+                    stars: 3,
+                    review: '55'
+                    })
+      +pagination({caption:'1 – 12 из 100+ вариантов аренды',
+                   class:'search-room__pagination'})
+
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='./search-room.js')
+  script(src='../../../components/pagination/pagination.js')

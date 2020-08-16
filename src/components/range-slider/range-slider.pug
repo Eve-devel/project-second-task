@@ -1,9 +1,14 @@
+//-
+  options.name - заголовок слайдера;
+  options.comment - уточняющий комментарий внизу слайдера;
+
 mixin range-slider(options={})
   .range-slider
     .range-slider__name
-      h3='Range Slider'
+      h3=options.name
       .range-slider__values
         span#range-slider__value-min
         span=' - '
         span#range-slider__value-max
     #range-slider__line
+    p.range-slider__comment=options.comment

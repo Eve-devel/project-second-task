@@ -17,6 +17,13 @@
     line-height: 15px;
   }
 
+  &__comment {
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+    margin-top: 13.56px;
+  }
+
   & #range-slider__line {
 
     &.noUi-target {

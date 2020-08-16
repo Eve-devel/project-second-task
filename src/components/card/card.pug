@@ -7,6 +7,17 @@ include ../radio/radio.pug
 include ../toggle/toggle.pug
 include ../rate-btn/rate-btn.pug
 
+//-
+  options.class - присвоение дополнительного класса стилей (строка);
+  Для +card-room():
+    options.photo - путь к файлу с фото для img,
+    options.arrows - наличие стрелок вправо/влево для пролистывания фото (bool);
+    options.number - номер комнаты (строка);
+    options.price - стоимость номера (строка);
+    options.type - тип номера (строка);
+    options.stars - количества звёзд рейтинга (число);
+    options.review - количество отзывов;
+
 mixin card-search(options={})
   .card(class=options.class)
     +layout({row_gap:'20'})
@@ -115,7 +126,7 @@ mixin card-room(options={})
           .card__text-line
             h2.card__text-room-number='№ '
             h2=options.number
-            h3.card__text-room-type=options.type
+            h3.card__text-room-type=' '+options.type
           .card__text-line
             p.card__text-room-price.card__text-room-price_bold=options.price
             p.card__text-room-price.card__text-room-price_small=' в сутки'

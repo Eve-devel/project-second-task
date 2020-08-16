@@ -1,5 +1,9 @@
+//-
+  options.caption - подпись снизу (строка);
+  options.class - дополнительные классы стилей;
+
 mixin pagination(options={})
-  .pagination
+  .pagination(class=options.class)
     #data-container
     #pagination-container
     span.pagination__text=options.caption
