@@ -1,0 +1,115 @@
+extends ../../layouts/website
+
+block title
+  | Room details
+
+block content
+  include ../../../components/comment/comment.pug
+  include ../../../components/icon-text-list/icon-text-list.pug
+  include ../../../components/bullet-list/bullet-list.pug
+  include ../../../components/card/card.pug
+  include ../../../components/layout/layout.pug
+  main.room-details
+    .room-details__photos
+      img(src='./img/room888_1.png' alt='Фото 888 номера')
+      img(src='./img/room888_2.png' alt='Фото 888 номера')
+      img(src='./img/room888_3.png' alt='Фото 888 номера')
+    +layout({row_gap: '32', mix:'room-details__information'})
+      div
+        h2.room-details__header='Сведения о номере'
+        +icon-text-list({items:[
+                          {icon: 'insert_emoticon',
+                           header: 'Комфорт',
+                           text: 'Шумопоглощающие стены'},
+                          {icon: 'location_city',
+                           header: 'Удобство',
+                           text: 'Окно в каждой из спален'},
+                          {icon: 'whatshot',
+                          header: 'Уют',
+                          text: 'Номер оснащён камином'}
+                          ]})
+      .room-details__impressions
+        h2.room-details__header='Впечатления от номера'
+        .room-details__pie-chart
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="58" fill="#fff"></circle>
+            <circle cx="60" cy="60" r="58" fill="transparent" stroke="#d2d3d4" stroke-width="4"></circle>
+            <circle cx="60" cy="60" r="58" fill="transparent" stroke="#FFFFFF" stroke-width="4" stroke-dasharray='2 89' stroke-dashoffset='-91'></circle>
+            <circle cx="60" cy="60" r="58" fill="transparent" stroke="#FFE39C" stroke-width="4" stroke-dasharray='180 182' stroke-dashoffset='-93'></circle>
+            <circle cx="60" cy="60" r="58" fill="transparent" stroke="#6FCF97" stroke-width="4" stroke-dasharray='89 275' stroke-dashoffset='-2'></circle>
+            <circle cx="60" cy="60" r="58" fill="transparent" stroke="#BC9CFF" stroke-width="4" stroke-dasharray='89 275' stroke-dashoffset='89'></circle>
+              <g>
+                <text class='room-details__pie-chart-central-text-number' fill='#BC9CFF' x='50%' y='48%' text-anchor="middle">260</text>
+                <text class='room-details__pie-chart-central-text-word' fill='#BC9CFF' x='50%' y='64%' text-anchor="middle">голосов</text>
+              </g>
+          </svg>
+          .room-details__pie-chart-legend
+            p
+              <svg class='room-details__pie-chart-legend-paragraph' width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="5" fill="url(#paint0_linear)"/>
+                <linearGradient id="paint0_linear" x1="5" y1="0" x2="5" y2="10">
+                  <stop stop-color="#FFE39C"/>
+                  <stop offset="1" stop-color="#FFBA9C"/>
+                </linearGradient>
+              </svg>
+              span='Великолепно'
+            p
+              <svg class='room-details__pie-chart-legend-paragraph' width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="5" fill="url(#paint1_linear)"/>
+                <linearGradient id="paint1_linear" x1="5" y1="0" x2="5" y2="10">
+                  <stop stop-color="#6FCF97"/>
+                  <stop offset="1" stop-color="#66D2EA"/>
+                </linearGradient>
+              </svg>
+              span='Хорошо'
+            p
+              <svg class='room-details__pie-chart-legend-paragraph' width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="5" fill="url(#paint3_linear)"/>
+                <linearGradient id="paint3_linear" x1="5" y1="0" x2="5" y2="10">
+                  <stop stop-color="#BC9CFF"/>
+                  <stop offset="1" stop-color="#8BA4F9"/>
+                </linearGradient>
+              </svg>
+              span='Удовлетворительно'
+            p
+              <svg class='room-details__pie-chart-legend-paragraph' width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <circle cx="5" cy="5" r="5" fill="url(#paint4_linear)"/>
+                <linearGradient id="paint4_linear" x1="5" y1="0" x2="5" y2="10">
+                  <stop stop-color="#919191"/>
+                  <stop offset="1" stop-color="#3В4975"/>
+                </linearGradient>
+              </svg>
+              span='Разочарован'
+      +card-room-details({class:'room-details__card-room-details'})
+      .room-details__comments
+        .room-details__comments-header
+          h2.room-details__header.room-details__header_block_comments='Отзывы посетителей номера'
+          span.room-details__comments-count='2 отзыва'
+        +comment({comments: [
+                             {photo: './img/avatar1.png',
+                              name: 'Мурад Сарафанов',
+                              time: '5 дней назад',
+                              like: {val: '12', checked: true},
+                              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                              },
+                              {photo: './img/avatar2.png',
+                               name: 'Патрисия Стёклышкова',
+                               time: 'Неделю назад',
+                               like: {val: '2', checked: false},
+                               text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                               }
+                            ]
+                })
+      div
+        h2.room-details__header.room-details__header_block_rules='Правила'
+        +bullet-list({name: '',
+                      items: ['Нельзя с питомцами',
+                              'Без вечеринок и мероприятий',
+                              'Время прибытия — после 13:00,\nа выезд до 12:00']
+                    })
+      .room-details__canceling
+        h2.room-details__header.room-details__header_block_canceling='Отмена'
+        p='Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='./room-details.js')

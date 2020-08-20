@@ -70,9 +70,9 @@ block content
         +checkbox({
           texts: [{text:'Можно курить'},
                   {text:'Можно с питомцами',
-                   checked: 'checked'},
+                   checked: true},
                   {text:'Можно пригласить гостей\n(до 10 человек)',
-                   checked: 'checked'}
+                   checked: true}
                  ],
           name: 'Checkbox Buttons'
         })
@@ -95,11 +95,12 @@ block content
           h3.form-elements__h3='Like Button'
           +like-button({
             val: '2',
+            checked: false,
             class: 'form-elements__like-button'
           })
           +like-button({
             val: '12',
-            checked: 'checked'
+            checked: true
           })
         div
           h3.form-elements__h3='Rate Button'
@@ -181,9 +182,9 @@ block content
         +checkbox({
           expandable: true,
           texts: [{text:'Завтрак'},
-                  {text:'Письменный стол', checked: 'checked'},
-                  {text:'Стул для кормления', checked: 'checked'},
-                  {text:'Кроватка', checked: 'checked'},
+                  {text:'Письменный стол', checked: true},
+                  {text:'Стул для кормления', checked: true},
+                  {text:'Кроватка', checked: true},
                   {text:'Телевизор'},
                   {text:'Шампунь'},
                   {text:'Телевизор'},
@@ -194,9 +195,9 @@ block content
         +checkbox({
           expandable: true,
           texts: [{text:'Завтрак'},
-                  {text:'Письменный стол', checked: 'checked'},
-                  {text:'Стул для кормления', checked: 'checked'},
-                  {text:'Кроватка', checked: 'checked'},
+                  {text:'Письменный стол', checked: true},
+                  {text:'Стул для кормления', checked: true},
+                  {text:'Кроватка', checked: true},
                   {text:'Телевизор'},
                   {text:'Шампунь'},
                   {text:'Телевизор'},
@@ -224,20 +225,22 @@ block content
         +icon-text-list({
           items: [
                   {
-                    icon: 'insert_emoticon',
-                     header: 'Комфорт',
-                     text: 'Шумопоглощающие стены'},
-                   {
-                     icon: 'location_city',
-                     header: 'Удобство',
-                     text: 'Окно в каждой из спален'}]
+                   icon: 'insert_emoticon',
+                   header: 'Комфорт',
+                   text: 'Шумопоглощающие стены'},
+                  {
+                   icon: 'location_city',
+                   header: 'Удобство',
+                   text: 'Окно в каждой из спален'
+                  }
+                 ]
         })
       +layout({mix: 'form-elements__central-column form-elements__comment'})
         +comment({
           comments: [{photo: './img/photo.png',
                       name: 'Мурад Сарафанов',
                       time: '5 дней назад',
-                      like: {val: '12', checked: 'checked'},
+                      like: {val: '12', checked: true},
                       text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
                       }]
         })

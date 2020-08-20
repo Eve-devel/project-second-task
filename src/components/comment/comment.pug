@@ -1,5 +1,16 @@
+include ../like-button/like-button.pug
+
+//-
+  options.class - дополнительный класс; 
+  options.comments - массив объектов со свойствами:
+    photo:'' - аватарка комментирующего;
+    name:'' - имя комментирующего;
+    time:'' - время написания комментария;
+    like:{val:'', checked:'checked'} - кол-во и активность лайка;
+    text:'' - текст комментария
+
 mixin comment(options={})
-  .comment
+  .comment(class=options.class)
     each item in options.comments
       img.comment__photo(src=item.photo)
       .comment__header
