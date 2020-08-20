@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/pages/website/room-details/room-details.pug",
+    "start": "parcel src/pages/website/sign-in/sign-in.pug",
     "build": "parcel build src/index.pug -d docs --public-url ./"
   },
   "license": "MIT",

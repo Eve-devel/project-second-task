@@ -1,0 +1,16 @@
+.registration {
+
+  width: 1440px;
+  height: 684px;
+  background-image: url(./img/background.png);
+  background-position: bottom;
+
+  &__wrapper {
+    width: 1443px;
+    position: absolute;
+  }
+
+  &__card-registration {
+    margin: 18px auto 19px;
+  }
+}

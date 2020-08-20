@@ -1,0 +1,16 @@
+.sign-in {
+
+  width: 1440px;
+  height: 684px;
+  background-image: url(./img/background.png);
+  background-position: bottom;
+
+  &__wrapper {
+    width: 1438px;
+    position: absolute;
+  }
+
+  &__card-enter {
+    margin: 162px auto 162px;
+  }
+}

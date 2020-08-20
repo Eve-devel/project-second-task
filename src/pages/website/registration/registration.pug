@@ -1,0 +1,14 @@
+extends ../../layouts/website
+
+block title
+  | Registration
+
+block content
+  include ../../../components/card/card.pug
+  main.registration
+    .registration__wrapper
+      +card-registration({class:'registration__card-registration'})
+
+block scripts
+  script(src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous")
+  script(src='./registration.js')
