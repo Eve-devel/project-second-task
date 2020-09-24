@@ -8,6 +8,10 @@
   border-radius: 4px;
   padding: 40px 30px 30px;
 
+  @media (min-width: 320px) and (max-width: 575px) {
+    
+  }
+
   &__stroke {
     display: flex;
     justify-content: space-between;

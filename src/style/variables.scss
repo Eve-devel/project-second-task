@@ -1,3 +1,13 @@
+$xxxs: 320px;
+$xxs: 480px;
+$xs: 576px;
+$sm: 766px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1440px;
+$xxl: 1600px;
+$xxxl: 1920px;
+
 $dark-shade-100: #1F2041;
 $dark-shade-75: rgba(31, 32, 65, 0.75);
 $dark-shade-50: rgba(31, 32, 65, 0.5);
@@ -8,3 +18,21 @@ $purple: #BC9CFF;
 $green: #6FCF97;
 $main-gradient: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
 $opacity-gradient: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+
+@mixin media-breakpoint-up($width) {
+  @media (min-width: $width + 1) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($min-width, $max-width) {
+  @media (min-width: $min-width + 1) and (max-width: $max-width) {
+    @content;
+  }
+}
