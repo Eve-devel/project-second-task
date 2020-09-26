@@ -1,5 +1,5 @@
-mixin logo(type)
-  if type=='color'
-    .logo.logo_type_color
-  else if type=='grey'
-    .logo.logo_type_grey
+mixin logo(options={})
+  if options.type=='color'
+    .logo.logo_type_color(class=options.class)
+  else if options.type=='grey'
+    .logo.logo_type_grey(class=options.class)

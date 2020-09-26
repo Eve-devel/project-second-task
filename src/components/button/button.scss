@@ -17,6 +17,10 @@
     outline: none;
   }
 
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+
   &__gradient-wrapper {
     background-image: $main-gradient;
     border-radius: 22px;
@@ -28,6 +32,10 @@
 
     &_with-button {
       width: 320px;
+
+      @media (max-width: 575px) {
+        width: 250px;
+      }
     }
 
     &:hover:not(.button__gradient-wrapper_with-button) {

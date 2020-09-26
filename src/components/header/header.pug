@@ -4,20 +4,21 @@ include ../logo/logo.pug
 mixin header(options={})
   if options.type == 'not-entered'
     header.header
-      +logo('color')
-      .header__right-block
-        nav.header__nav
-          each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-           if val == 'Услуги' || val == 'Соглашения'
-             p= val
-                  span.material-icons expand_more
-           else
-             p= val
+      +logo({type:'color', class:'header__logo'})
+      nav.header__nav
+        each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+         if val == 'Услуги' || val == 'Соглашения'
+           p= val
+                span.material-icons expand_more
+         else
+           p= val
+      .header__button-container_type_uncolor
         +button({text:'Войти', class:'header__uncolor-button'})
+      .header__button-container_type_color
         +button({type: 'color', text:'ЗАРЕГИСТРИРОВАТЬСЯ', class:'header__color-button'})
   if options.type == 'entered'
     header.header
-      +logo('color')
+      +logo({type:'color', class:'header__logo'})
       .header__right-block
         nav.header__nav
           each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']

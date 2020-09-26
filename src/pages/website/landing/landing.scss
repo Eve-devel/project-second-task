@@ -2,16 +2,29 @@
 
 .landing {
   width: 100%;
-  height: 57.63888888888889vw;
-  max-height: 900px;
+  max-height: 850px;
   background-image: url(./img/background1.png);
   background-position: bottom left;
-//  background-size: cover;
-  @media (min-width: 480px) and (max-width: 765px) {
-    height: 75%;
+  background-size: cover;
+
+  @media (min-width: 766px) {
+    height: 57.63888888888889vw;
   }
-  @media (min-width: 320px) and (max-width: 479px) {
-    height: 77%;
+  @media (min-width: 576px) and (max-width: 765px) {
+    height: 83vw;
+  }
+  @media (min-width: 480px) and (max-width: 575px) {
+    height: 113vw;
+  }
+  @media (max-width: 479px) {
+    height: 170vw;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   &__card-search {
@@ -21,11 +34,11 @@
     @media (min-width: 766px) and (max-width: 991px) {
       margin: 4.861111111111111% 0 0 5%;
     }
-    @media (min-width: 576px) and (max-width: 765px) {
+    @media (min-width: 480px) and (max-width: 765px) {
       margin: 4.861111111111111% 0 0 4%;
     }
-    @media (min-width: 480px) and (max-width: 575px) {
-      margin: 4.861111111111111% 0 0 4%;
+    @media (max-width: 479px) {
+      margin: 4.861111111111111% 0 0 2%;
     }
   }
 
@@ -33,10 +46,14 @@
     width: 297px;
     text-align: right;
     position: relative;
-    top: 52.84722222222222vw;
-    left: 70.13888888888889vw;
+    top: 92.0481927711%;
+    left: 70.06944444%;
     color: $dark-shade-75;
 
+    @media (min-width: 1441px) {
+      top: 88%;
+      left: 65vw;
+    }
     @media (min-width: 992px) and (max-width: 1200px) {
       top: 51vw;
       left: 65vw;
@@ -53,6 +70,13 @@
       top: 87%;
       left: 33vw;
       color: #000;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    }
+    @media (max-width: 479px) {
+      top: 87%;
+      left: 0.5vw;
+      color: #fff;
+      text-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
     }
   }
 }

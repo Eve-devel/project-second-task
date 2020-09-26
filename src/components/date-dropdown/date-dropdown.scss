@@ -7,8 +7,12 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 575px) {
+    min-width: 250px;
+    flex-wrap: wrap;
+  }
+
   &__wrapper {
-    width: 150px;
     height: 44px;
     background: #FFFFFF;
     border: 1px solid $dark-shade-25;
@@ -18,10 +22,14 @@
     color: $dark-shade-75;
     display: flex;
     position: relative;
+
+    @media (max-width: 575px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__input {
-    width: 106px;
+    width: 104px;
     height: 100%;
     border: 0px solid transparent;
     border-radius: 14px;
@@ -36,6 +44,10 @@
 
     &:focus {
       outline: none;
+    }
+
+    @media (max-width: 575px) {
+      width: 206px;
     }
   }
 

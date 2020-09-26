@@ -4,6 +4,10 @@
   min-width: 266px;
   width: 100%;
 
+  @media (max-width: 575px) {
+    min-width: 250px;
+  }
+
   &__name {
     display: flex;
     justify-content: space-between;
