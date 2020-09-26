@@ -17,9 +17,9 @@
     outline: none;
   }
 
-  @media (max-width: 480px) {
-    font-size: 9px;
-  }
+  // @media (max-width: 480px) {
+  //   font-size: 9px;
+  // }
 
   &__gradient-wrapper {
     background-image: $main-gradient;

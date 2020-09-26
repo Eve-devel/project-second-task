@@ -5,7 +5,7 @@ include ../logo/logo.pug
 mixin footer(options={})
   if options.type == 'creative'
     footer.footer__creative
-      +logo('color')
+      +logo({type:'color'})
       p.footer__copyright_for-creative='Copyright © 2018 Toxin отель. Все права защищены.'
       .footer__icons
         p.footer__icon=''
@@ -14,8 +14,8 @@ mixin footer(options={})
   else
     footer.footer
       .footer__top-block
-        +layout({row_gap:'20'})
-          +logo('color')
+        +layout({row_gap:'20', mix:'footer__first-block'})
+          +logo({type:'color'})
           p='Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'
         -
           var array = [
@@ -29,7 +29,7 @@ mixin footer(options={})
             +layout({row_gap:'20'})
               each item in val.list
                 p.footer__list=item
-        +layout({row_gap:'20'})
+        +layout({row_gap:'20', mix:'footer__last-block'})
           h3.footer__title='Подписка'
           +layout({row_gap:'20'})
             p='Получайте специальные предложения и новости сервиса'

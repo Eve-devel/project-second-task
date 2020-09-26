@@ -2,15 +2,46 @@
 
 .footer {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &__top-block {
     display: grid;
     grid-template-columns: 260px 160px 160px 160px 260px;
-    grid-column-gap: 40px;
-    padding: 100px 140px;
+    grid-column-gap: 2.77777777vw;
+    padding: 6.944444444vw 9.7222222222vw;
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px $dark-shade-10;
+    box-shadow: 0px 1px 0px $dark-shade-10;
     margin-bottom: 1px;
+
+    @media (min-width: 1440px) {
+      padding: 100px 140px;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+      grid-template-columns: auto 160px 160px 160px;
+      grid-row-gap: 40px;
+    }
+    @media (min-width: 766px) and (max-width: 991px) {
+      grid-template-columns: 40% 40% 30%;
+      grid-row-gap: 40px;
+    }
+    @media (min-width: 576px) and (max-width: 765px) {
+      grid-template-columns: auto 35%;
+      grid-row-gap: 25px;
+      grid-column-gap: 7vw;
+      padding: 6.944444444vw 15vw;
+    }
+    @media (min-width: 480px) and (max-width: 575px) {
+      grid-template-columns: 50% 50%;
+      grid-row-gap: 30px;
+      justify-items: center;
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: auto;
+      grid-row-gap: 30px;
+      padding: 6.944444444vw 10vw;
+      justify-items: center;
+    }
   }
 
   &__title {
@@ -18,21 +49,34 @@
   }
 
   &__list {
+    min-width: 143px;
     line-height: 18px;
     color: $dark-shade-50;
+  }
+
+  &__first-block {
+    @media (min-width: 480px) and (max-width: 575px) {
+      grid-column: 1/3;
+    }
+  }
+
+  &__last-block {
+    @media (min-width: 480px) and (max-width: 575px) {
+      grid-column: 1/3;
+    }
   }
 
   &__bottom-block {
     background: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 23px 140px;
-    height: 70px;
-    box-shadow: 0px 10px 20px $dark-shade-5;
+    padding: 23px 9.7222222222vw;
+    //box-shadow: 0px 10px 20px $dark-shade-5;
   }
 
   &__copyright {
     line-height: 24px;
+    margin-right: 5px;
 
     &_for-creative {
       line-height: 18px;
@@ -44,6 +88,7 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 20px;
+    align-items: center;
   }
 
   &__icon {
