@@ -4,6 +4,20 @@
   display: flex;
   padding: 30px 140px 70px;
   border-bottom: 1px solid $dark-shade-25;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: 2000px) {
+    max-width: 1723px;
+  }
+  @media (min-width: 1201px) and (max-width: 1439px) {
+    padding: 30px 3% 70px;
+    max-width: 1248px;
+  }
+  @media(max-width: 1200px) {
+    padding: 30px 3% 70px;
+    max-width: 946px;
+  }
 
   &__filters {
     width: 266px;
@@ -17,7 +31,15 @@
   &__rooms {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 12px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
+
+    @media (min-width: 2000px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media(max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 20px;
+    }
   }
 
   &__pagination {
