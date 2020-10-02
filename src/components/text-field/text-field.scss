@@ -4,6 +4,11 @@
   min-width: 320px;
   width: 100%;
 
+  @media (max-width: 575px) {
+    min-width: 0px;
+    width: 250px;
+  }
+
   &_with-button {
     min-width: 260px;
     width: 100%;
