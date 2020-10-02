@@ -4,11 +4,12 @@
 
   background: #FFF;
   padding: 143px 0 147px;
-  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &__elements {
   max-width: 1158px;
-  margin: 0 auto 0;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 320px);
 
     @media (max-width: 1200px) {
@@ -21,8 +22,11 @@
     }
     @media (max-width: 767px) {
       grid-template-columns: repeat(1, 320px);
-      max-width: 500px;
-      justify-content: center;
+      max-width: 320px;
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(1, 250px);
+      max-width: 250px;
     }
   }
 

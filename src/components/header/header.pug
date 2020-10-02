@@ -19,7 +19,7 @@ mixin header(options={})
   if options.type == 'entered'
     header.header
       +logo({type:'color', class:'header__logo'})
-      .header__right-block
+      .header__entered
         nav.header__nav
           each val in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
            if val == 'Услуги' || val == 'Соглашения'

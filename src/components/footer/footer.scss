@@ -81,6 +81,7 @@
     &_for-creative {
       line-height: 18px;
       margin: 20px 0 25px;
+      text-align: center;
     }
   }
 
@@ -111,5 +112,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 766px) {
+      padding: 70px 50px;
+      width: auto;
+    }
   }
 }

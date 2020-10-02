@@ -11,4 +11,5 @@ mixin range-slider(options={})
         span=' - '
         span#range-slider__value-max
     #range-slider__line
-    p.range-slider__comment=options.comment
+    if options.comment
+      p.range-slider__comment=options.comment

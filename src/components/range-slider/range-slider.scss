@@ -2,7 +2,7 @@
 @import '../../../node_modules/nouislider/distribute/nouislider.css';
 
 .range-slider {
-  width: 266px;
+  max-width: 266px;
 
   &__name {
     display: flex;
