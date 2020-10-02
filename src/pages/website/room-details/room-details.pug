@@ -11,9 +11,9 @@ block content
   include ../../../components/layout/layout.pug
   main.room-details
     .room-details__photos
-      img(src='./img/room888_1.png' alt='Фото 888 номера')
-      img(src='./img/room888_2.png' alt='Фото 888 номера')
-      img(src='./img/room888_3.png' alt='Фото 888 номера')
+      .room-details__photo.room-details__photo_size_big.room-details__photo_number_1
+      .room-details__photo.room-details__photo_size_small.room-details__photo_number_2
+      .room-details__photo.room-details__photo_size_small.room-details__photo_number_3
     +layout({row_gap: '32', mix:'room-details__information'})
       div
         h2.room-details__header='Сведения о номере'

@@ -32,6 +32,10 @@
 
        &_main {
         width: 319px;
+
+        @media (max-width: 575px) {
+          width: 100%;
+        }
       }
 
       &_list {
@@ -89,7 +93,7 @@
   }
 
   &__inf {
-    width: 214px;
+    max-width: 214px;
     display: inline-block;
     line-height: 18px;
   }
